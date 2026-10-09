@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff2f7">
+  <title>Flor de Página — Minha biblioteca</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="default-books.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Menu principal">
+      <a class="brand" href="#top" aria-label="Flor de Página, início">
+        <span class="brand-mark" aria-hidden="true">✿</span>
+        <span><strong>flor de página</strong><small>seu cantinho literário</small></span>
+      </a>
+      <div class="sidebar-note">
+        <span class="tiny-sparkle">✧</span>
+        <p>Entre páginas, personagens e mundos que ficam com a gente.</p>
+      </div>
+      <div class="sidebar-section-label">MINHA ESTANTE</div>
+      <nav class="side-nav" aria-label="Navegação da biblioteca">
+        <button class="nav-item active" id="nav-all" type="button"><span>▤</span> Todos os livros <b id="nav-total">0</b></button>
+        <button class="nav-item" data-status-filter="Biblioteca" type="button"><span>♡</span> Biblioteca</button>
+        <button class="nav-item" data-status-filter="Quero ler" type="button"><span>✧</span> Quero ler</button>
+        <button class="nav-item" data-status-filter="Lendo" type="button"><span>◷</span> Lendo agora</button>
+        <button class="nav-item" data-status-filter="Lido" type="button"><span>✓</span> Já li</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="mini-flower" aria-hidden="true">✿</div>
+        <p>Uma estante do seu jeito, no seu ritmo.</p>
+        <span>Feito para leitores apaixonados ♡</span>
+      </div>
+    </aside>
+    <div class="sidebar-backdrop" id="sidebar-backdrop" aria-hidden="true" hidden></div>
+
+    <main class="main-content" id="top">
+      <header class="topbar">
+        <div class="topbar-leading">
+          <button class="icon-button mobile-menu-toggle" id="mobile-menu-toggle" type="button" aria-label="Abrir menu" aria-controls="sidebar" aria-expanded="false" title="Abrir menu (ou deslize da esquerda para a direita)"><span id="mobile-menu-icon" aria-hidden="true">☰</span></button>
+          <div class="breadcrumb">MINHA BIBLIOTECA <span>/</span> <span id="breadcrumb-current">ESTANTE</span></div>
+        </div>
+        <div class="top-actions">
+          <div class="save-indicator" id="save-indicator"><span class="save-dot"></span><span id="save-text">Salvo neste navegador</span></div>
+          <button class="icon-button" id="theme-toggle" type="button" aria-label="Ativar modo escuro" title="Alternar modo claro/escuro"><span id="theme-icon">☾</span></button>
+          <button class="button button-outline" id="connect-json" type="button" title="Vincular um JSON para sincronização automática">↔ <span>Vincular JSON</span></button>
+          <button class="button button-primary" id="add-book" type="button"><span>＋</span> Adicionar livro</button>
+        </div>
+      </header>
+
+      <section class="welcome-row">
+        <div>
+          <div class="eyebrow"><span>✧</span> SEU UNIVERSO PARTICULAR</div>
+          <h1>Minha <em>biblioteca</em></h1>
+          <p class="page-subtitle">Todos os seus mundos favoritos em um só lugar.</p>
+        </div>
+        <div class="header-doodle" aria-hidden="true"><span>✿</span><i>✧</i><b>♡</b></div>
+      </section>
+
+      <section class="stats-grid" aria-label="Resumo da biblioteca">
+        <article class="stat-card stat-pink"><div class="stat-icon">▤</div><div><span>Total de livros</span><strong id="stat-total">0</strong></div><div class="stat-corner">✿</div></article>
+        <article class="stat-card stat-lilac"><div class="stat-icon">♡</div><div><span>Biblioteca</span><strong id="stat-want">0</strong></div><div class="stat-corner">✧</div></article>
+        <article class="stat-card stat-peach"><div class="stat-icon">★</div><div><span>Média das notas</span><strong id="stat-rating">—</strong></div><div class="stat-corner">✿</div></article>
+      </section>
+
+      <section class="library-section">
+        <div class="section-heading">
+          <div><h2 id="list-heading">Sua estante</h2><p id="results-count">Vamos preencher essas prateleiras?</p></div>
+          <div class="view-hint"><span>✦</span> Um livro de cada vez</div>
+        </div>
+        <div class="filter-panel">
+          <label class="search-box" for="search-input"><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Buscar por título, autor, personagem..." autocomplete="off"><kbd>⌘ K</kbd></label>
+          <label class="filter-select"><span>Gênero</span><select id="genre-filter"><option value="">Todos os gêneros</option></select></label>
+          <label class="filter-select"><span>Estante</span><select id="status-filter"><option value="">Todos os status</option><option>Biblioteca</option><option>Quero ler</option><option>Lendo</option><option>Lido</option><option>Pausado</option><option>Abandonado</option></select></label>
+          <label class="filter-select sort-select"><span>Ordenar</span><select id="sort-select"><option value="recent">Adicionados recentemente</option><option value="title">Título (A–Z)</option><option value="rating">Maior nota</option><option value="author">Autor (A–Z)</option></select></label>
+          <button class="clear-filters" id="clear-filters" type="button">Limpar</button>
+        </div>
+        <div class="active-filters" id="active-filters" hidden></div>
+        <div class="book-grid" id="book-grid" aria-live="polite"></div>
+        <div class="empty-state" id="empty-state">
+          <div class="empty-art"><span>♡</span><i>✧</i><b>✿</b></div>
+          <h3 id="empty-title">Sua estante está esperando por você</h3>
+          <p id="empty-description">Adicione seu primeiro livro e comece a guardar aqui suas histórias favoritas.</p>
+          <button class="button button-primary" id="empty-add" type="button">＋ Adicionar meu primeiro livro</button>
+        </div>
+      </section>
+
+      <footer class="app-footer"><span>✿</span> Feito com carinho e muitas páginas <span>♡</span><div><button type="button" id="import-json">Importar JSON</button><span>·</span><button type="button" id="export-json">Exportar JSON</button><span>·</span><button type="button" id="help-json">Sobre os dados</button></div></footer>
+    </main>
+  </div>
+
+  <input id="import-file-input" type="file" accept=".json,application/json" hidden>
+
+  <dialog class="modal editor-modal" id="editor-modal" aria-labelledby="editor-title">
+    <form id="book-form" novalidate>
+      <div class="modal-header">
+        <div><div class="eyebrow"><span>✧</span> SUA FICHA LITERÁRIA</div><h2 id="editor-title">Adicionar um livro</h2><p>Guarde os detalhes que fazem essa história ser especial.</p></div>
+        <button class="modal-close" type="button" data-close="editor-modal" aria-label="Fechar">×</button>
+      </div>
+      <div class="form-body">
+        <div class="form-layout">
+          <section class="cover-column">
+            <label class="field-label">Capa do livro</label>
+            <div class="cover-upload" id="cover-drop-area">
+              <img id="cover-preview" alt="Prévia da capa" hidden>
+              <div id="cover-placeholder" class="cover-placeholder"><span>♡</span><strong>Sua capa aqui</strong><small>JPG, PNG ou WEBP</small></div>
+              <label for="cover-input" class="cover-upload-button">＋ Escolher imagem</label>
+              <input id="cover-input" type="file" accept="image/png,image/jpeg,image/webp,image/gif" hidden>
+            </div>
+            <button class="text-button remove-cover" id="remove-cover" type="button" hidden>Remover capa</button>
+            <p class="field-help">A imagem é reduzida para economizar espaço e acompanha o JSON exportado.</p>
+          </section>
+          <section class="main-fields">
+            <div class="field-group"><label class="field-label" for="book-title">Título <span class="required">*</span></label><input id="book-title" name="title" required maxlength="180" placeholder="Nome do livro"><span class="field-error" id="title-error"></span></div>
+            <div class="two-columns">
+              <div class="field-group"><label class="field-label" for="book-author">Autor</label><input id="book-author" name="author" maxlength="120" placeholder="Nome do autor"></div>
+              <div class="field-group"><label class="field-label" for="book-status">Status de leitura</label><select id="book-status" name="status"><option>Biblioteca</option><option>Quero ler</option><option>Lendo</option><option>Lido</option><option>Pausado</option><option>Abandonado</option></select></div>
+            </div>
+            <div class="field-group"><label class="field-label" for="book-genres">Gêneros</label><input id="book-genres" name="genres" maxlength="220" placeholder="Fantasia, romance, mistério"><span class="field-help">Separe os gêneros por vírgulas. Eles viram filtros automaticamente.</span></div>
+            <div class="two-columns">
+              <div class="field-group"><label class="field-label" for="book-rating">Sua nota</label><select id="book-rating" name="rating"><option value="0">Ainda não avaliei</option><option value="1">★☆☆☆☆ — 1/5</option><option value="2">★★☆☆☆ — 2/5</option><option value="3">★★★☆☆ — 3/5</option><option value="4">★★★★☆ — 4/5</option><option value="5">★★★★★ — 5/5</option></select></div>
+              <div class="field-group"><label class="field-label" for="book-favorite">Favorito?</label><select id="book-favorite" name="favorite"><option value="false">Não</option><option value="true">Sim, favorito ♡</option></select></div>
+            </div>
+          </section>
+        </div>
+        <div class="form-divider"><span>✿</span><span>A história</span><span></span></div>
+        <div class="field-group"><label class="field-label" for="book-synopsis">Sinopse</label><textarea id="book-synopsis" name="synopsis" rows="4" maxlength="6000" placeholder="Sobre o que é esse livro? Você pode escrever ou colar a sinopse aqui..."></textarea></div>
+        <div class="form-divider"><span>✿</span><span>Personagens principais</span><span></span></div>
+        <div id="characters-list" class="characters-list"></div>
+        <button class="button button-soft add-character" id="add-character" type="button">＋ Adicionar personagem</button>
+        <div class="form-divider"><span>✿</span><span>Suas impressões</span><span></span></div>
+        <div class="field-group"><label class="field-label" for="book-comments">Comentários / resenha</label><textarea id="book-comments" name="comments" rows="3" maxlength="6000" placeholder="O que você achou da história? O que sentiu durante a leitura?"></textarea></div>
+        <div class="field-group"><label class="field-label" for="book-notes">Anotações pessoais</label><textarea id="book-notes" name="notes" rows="2" maxlength="6000" placeholder="Citações, detalhes para lembrar, páginas favoritas..."></textarea></div>
+      </div>
+      <div class="modal-footer"><span class="form-footnote"><span class="required">*</span> Campo obrigatório</span><div><button class="button button-outline" type="button" data-close="editor-modal">Cancelar</button><button class="button button-primary" type="submit">Salvar livro ♡</button></div></div>
+    </form>
+  </dialog>
+
+  <dialog class="modal detail-modal" id="detail-modal" aria-labelledby="detail-title">
+    <div class="detail-header"><button class="modal-close" type="button" data-close="detail-modal" aria-label="Fechar">×</button><div id="detail-content"></div></div>
+  </dialog>
+
+  <dialog class="modal small-modal" id="help-modal" aria-labelledby="help-title">
+    <div class="modal-header"><div><div class="eyebrow">✧ IMPORTANTE</div><h2 id="help-title">Onde ficam seus dados?</h2></div><button class="modal-close" type="button" data-close="help-modal" aria-label="Fechar">×</button></div>
+    <div class="help-content">
+      <p><strong>Salvamento automático:</strong> por padrão, seus livros ficam salvos neste navegador e neste dispositivo.</p>
+      <p><strong>Arquivo JSON:</strong> use <em>Exportar JSON</em> para baixar uma cópia portátil de todos os dados, incluindo capas, personagens, notas e comentários. Use <em>Importar JSON</em> para restaurar uma cópia; a importação substitui a biblioteca atual.</p>
+      <p><strong>Sincronização com arquivo:</strong> no Chrome ou Edge em um contexto compatível, clique em <em>Vincular JSON</em> e selecione um arquivo JSON existente. Depois de autorizar, as alterações são gravadas nele automaticamente. Se o recurso não estiver disponível, exporte o JSON manualmente.</p>
+      <p><strong>Privacidade:</strong> o site não tem login, servidor ou banco de dados remoto. As imagens são comprimidas no próprio navegador.</p>
+      <p class="help-warning">Dica: faça exportações de backup regularmente. Limpar os dados do navegador pode apagar a cópia local.</p>
+    </div>
+    <div class="modal-footer single-footer"><button class="button button-primary" type="button" data-close="help-modal">Entendi ♡</button></div>
+  </dialog>
+
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
