@@ -677,24 +677,34 @@
   function isMobileSidebarLayout() {
     return window.matchMedia('(max-width: 680px)').matches;
   }
-
   function setMobileMenuOpen(open, restoreFocus = false) {
     if (!sidebar || !mobileMenuToggle || !sidebarBackdrop) return;
-
     const mobile = isMobileSidebarLayout();
     const shouldOpen = mobile && Boolean(open);
-
     window.clearTimeout(backdropHideTimer);
     document.body.classList.toggle('mobile-menu-open', shouldOpen);
-    sidebar.setAttribute('aria-hidden', String(mobile && !shouldOpen));
+    sidebar.setAttribute(
+      'aria-hidden',
+      String(mobile && !shouldOpen)
+    );
     sidebar.inert = mobile && !shouldOpen;
-    mobileMenuToggle.setAttribute('aria-expanded', String(shouldOpen));
-    mobileMenuToggle.setAttribute('aria-label', shouldOpen ? 'Fechar menu' : 'Abrir menu');
-    $('#mobile-menu-icon').textContent = shouldOpen ? '×' : '☰';
-
+    mobileMenuToggle.setAttribute(
+      'aria-expanded',
+      String(shouldOpen)
+    );
+    mobileMenuToggle.setAttribute(
+      'aria-label',
+      shouldOpen ? 'Fechar menu' : 'Abrir menu'
+    );
+    const menuIcon = $('#mobile-menu-icon');
+    if (menuIcon) {
+      menuIcon.textContent = shouldOpen ? '×' : '☰';
+    }
     if (shouldOpen) {
       sidebarBackdrop.hidden = false;
-      window.requestAnimationFrame(() => sidebarBackdrop.classList.add('visible'));
+      requestAnimationFrame(() => {
+        sidebarBackdrop.classList.add('visible');
+      });
     } else {
       sidebarBackdrop.classList.remove('visible');
       backdropHideTimer = window.setTimeout(() => {
@@ -703,99 +713,139 @@
         }
       }, 230);
     }
-
     if (restoreFocus && mobile) {
       mobileMenuToggle.focus({ preventScroll: true });
     }
   }
-
   function syncMobileSidebarMode() {
     if (!sidebar || !mobileMenuToggle || !sidebarBackdrop) return;
-
-    if (!isMobileSidebarLayout()) {
+    const mobile = isMobileSidebarLayout();
+    if (!mobile) {
       document.body.classList.remove('mobile-menu-open');
       sidebar.setAttribute('aria-hidden', 'false');
       sidebar.inert = false;
       mobileMenuToggle.setAttribute('aria-expanded', 'false');
       mobileMenuToggle.setAttribute('aria-label', 'Abrir menu');
-      $('#mobile-menu-icon').textContent = '☰';
+      const menuIcon = $('#mobile-menu-icon');
+      if (menuIcon) {
+        menuIcon.textContent = '☰';
+      }
       sidebarBackdrop.classList.remove('visible');
       sidebarBackdrop.hidden = true;
       window.clearTimeout(backdropHideTimer);
       return;
     }
-
     const isOpen = document.body.classList.contains('mobile-menu-open');
     sidebar.setAttribute('aria-hidden', String(!isOpen));
     sidebar.inert = !isOpen;
     mobileMenuToggle.setAttribute('aria-expanded', String(isOpen));
-    mobileMenuToggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
-    $('#mobile-menu-icon').textContent = isOpen ? '×' : '☰';
+    mobileMenuToggle.setAttribute(
+      'aria-label',
+      isOpen ? 'Fechar menu' : 'Abrir menu'
+    );
+    const menuIcon = $('#mobile-menu-icon');
+    if (menuIcon) {
+      menuIcon.textContent = isOpen ? '×' : '☰';
+    }
     if (!isOpen) {
       sidebarBackdrop.classList.remove('visible');
       sidebarBackdrop.hidden = true;
     }
   }
-
   function bindMobileSidebarEvents() {
     mobileMenuToggle?.addEventListener('click', () => {
-      const isOpen = document.body.classList.contains('mobile-menu-open');
+      const isOpen = document.body.classList.contains(
+        'mobile-menu-open'
+      );
       setMobileMenuOpen(!isOpen, isOpen);
     });
-
     sidebarBackdrop?.addEventListener('click', () => {
       setMobileMenuOpen(false, true);
     });
-
     sidebar?.addEventListener('click', event => {
-      if (event.target.closest('.nav-item, .brand')) {
+      const target = event.target;
+      if (
+        target instanceof Element &&
+        target.closest('.nav-item, .brand')
+      ) {
         setMobileMenuOpen(false, true);
       }
     });
-
-    window.addEventListener('resize', syncMobileSidebarMode, { passive: true });
-
-    document.addEventListener('touchstart', event => {
-      if (!isMobileSidebarLayout() || document.querySelector('dialog[open]')) {
-        swipeStart = null;
-        return;
-      }
-
-      const touch = event.changedTouches[0];
-      swipeStart = {
-        x: touch.clientX,
-        y: touch.clientY,
-        menuOpen: document.body.classList.contains('mobile-menu-open')
-      };
-    }, { passive: true });
-
-    document.addEventListener('touchend', event => {
-      if (!swipeStart || !isMobileSidebarLayout()) {
-        swipeStart = null;
-        return;
-      }
-
-      const start = swipeStart;
-      swipeStart = null;
-      const touch = event.changedTouches[0];
-      const dx = touch.clientX - start.x;
-      const dy = touch.clientY - start.y;
-
-      // Ignore taps and predominantly vertical scrolling.
-      if (Math.abs(dx) < 65 || Math.abs(dx) < Math.abs(dy) * 1.25) return;
-
-      if (start.menuOpen) {
-        // Close with a leftward swipe that begins inside/near the open drawer.
-        if (dx < -65 && start.x <= Math.min(window.innerWidth * 0.85, 360)) {
-          setMobileMenuOpen(false, true);
+    window.addEventListener('resize', syncMobileSidebarMode, {
+      passive: true
+    });
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchStartMenuOpen = false;
+    let touchValid = false;
+    document.addEventListener(
+      'touchstart',
+      event => {
+        if (
+          !isMobileSidebarLayout() ||
+          document.querySelector('dialog[open]')
+        ) {
+          touchValid = false;
+          return;
         }
-      } else if (start.x <= 28 && dx > 65) {
-        // Open only when the gesture begins at the very left edge.
-        setMobileMenuOpen(true);
+        if (event.touches.length !== 1) {
+          touchValid = false;
+          return;
+        }
+        const touch = event.touches[0];
+        touchStartX = touch.clientX;
+        touchStartY = touch.clientY;
+        touchStartMenuOpen = document.body.classList.contains(
+          'mobile-menu-open'
+        );
+        touchValid = true;
+      },
+      {
+        passive: true,
+        capture: true
       }
-    }, { passive: true });
-  }
+    );
+    document.addEventListener(
+      'touchend',
+      event => {
+        if (!touchValid || !isMobileSidebarLayout()) {
+          touchValid = false;
+          return;
+        }
+        touchValid = false;
+        const touch = event.changedTouches[0];
+        if (!touch) return;
+        const touchEndX = touch.clientX;
+        const touchEndY = touch.clientY;
+        const diffX = touchEndX - touchStartX;
+        const diffY = touchEndY - touchStartY;
+        if (Math.abs(diffX) < 70) return;
+        if (Math.abs(diffX) < Math.abs(diffY) * 1.2) return;
+        if (touchStartMenuOpen) {
+          if (diffX < -70) {
+            setMobileMenuOpen(false, true);
+          }
+        } else {
+          if (diffX > 70 && touchStartX <= 45) {
+            setMobileMenuOpen(true);
+          }
+        }
+      },
+      {
+        passive: true,
+        capture: true
+      }
+    );
 
+    // Cancela a detecção se o navegador interromper o toque.
+    document.addEventListener(
+      'touchcancel',
+      () => {
+        touchValid = false;
+      },
+      { passive: true }
+    );
+  }
   function bindEvents() {
     $('#add-book').addEventListener('click', openNewBook);
     $('#empty-add').addEventListener('click', openNewBook);
