@@ -56,3 +56,5 @@ O JSON usa um objeto `books` com as fichas. O campo `cover` pode ser uma imagem 
 
 - Evite limpar os dados do navegador antes de exportar um backup.
 - O site não envia as fichas para serviços externos. O Google Fonts é usado apenas para tipografia, com fontes de sistema como alternativa se estiver offline.
+
+Link: https://samuelcsalema.github.io/Biblioteca-Kindle/
