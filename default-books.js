@@ -1,11 +1,15 @@
-/* Dados iniciais da biblioteca Flor de Página. Sinopses e personagens em português, resumidos de forma spoiler-light. */
+/* Dados iniciais da biblioteca Flor de Página, sincronizados com biblioteca-inicial.json. */
 window.FDP_DEFAULT_BOOKS = [
   {
     "id": "start-0a353ceb-d7db-50e5-8bf4-d1981f5a048b",
     "title": "A Guerra da Papoula",
     "author": "R.F. Kuang",
     "synopsis": "Órfã de guerra, Fang Runin (Rin) conquista uma vaga na academia militar de elite de Nikara. Quando a guerra retorna, ela descobre poderes xamânicos ligados à deusa Fênix e precisa decidir até onde irá para salvar seu povo.",
-    "genres": [],
+    "genres": [
+      "Fantasia épica",
+      "Ficção histórica",
+      "Guerra"
+    ],
     "characters": [
       {
         "name": "Fang Runin (Rin)",
@@ -34,7 +38,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "A Maldição do Mar",
     "author": "Shea ernshaw",
     "synopsis": "Em uma cidade costeira marcada por lendas e naufrágios, três irmãs acusadas de bruxaria são lembradas por uma maldição que retorna a cada verão. Uma jovem começa a investigar os acontecimentos e descobre que o passado da cidade está mais vivo do que parece.",
-    "genres": [],
+    "genres": [
+      "Fantasia",
+      "Mistério",
+      "Romance"
+    ],
     "characters": [
       {
         "name": "Penny Talbot",
@@ -63,7 +71,10 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Amor e Outras Palavras",
     "author": "Christina Lauren",
     "synopsis": "Macy e Elliot eram melhores amigos na adolescência e compartilhavam livros, conversas e sentimentos que nunca souberam expressar. Anos depois, um reencontro faz Macy encarar as lembranças e as razões que os separaram.",
-    "genres": [],
+    "genres": [
+      "Romance contemporâneo",
+      "Drama"
+    ],
     "characters": [
       {
         "name": "Macy Sorensen",
@@ -88,7 +99,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Ás de espadas",
     "author": "Faridah Àbíké-Íyímídé",
     "synopsis": "Dois estudantes negros de uma escola de elite recebem mensagens anônimas que expõem segredos e ameaçam suas reputações. Enquanto tentam descobrir quem está por trás dos ataques, o racismo e as estruturas de poder da instituição vêm à tona.",
-    "genres": [],
+    "genres": [
+      "Suspense",
+      "Mistério",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Chiamaka Adebayo",
@@ -117,7 +132,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Belo mundo, onde você está",
     "author": "Sally Ronney",
     "synopsis": "A romancista Alice conhece Felix por um aplicativo de encontros, enquanto sua melhor amiga Eileen tenta se recuperar de um término e volta a se aproximar de Simon. Entre conversas sobre amor, amizade, desigualdade e o futuro do mundo, os quatro tentam descobrir como construir uma vida significativa.",
-    "genres": [],
+    "genres": [
+      "Ficção contemporânea",
+      "Romance",
+      "Ficção literária"
+    ],
     "characters": [
       {
         "name": "Alice Kelleher",
@@ -150,7 +169,10 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Circe",
     "author": "Madeline Miller",
     "synopsis": "Filha do deus Hélio, Circe não se encaixa entre os deuses e descobre possuir o poder da feitiçaria. Exilada numa ilha, ela encontra mortais e figuras da mitologia grega e constrói sua própria identidade, enfrentando solidão, desejo e poder.",
-    "genres": [],
+    "genres": [
+      "Fantasia mitológica",
+      "Ficção histórica"
+    ],
     "characters": [
       {
         "name": "Circe",
@@ -179,7 +201,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Gallant",
     "author": "V. E. Schwab",
     "synopsis": "Após receber uma carta misteriosa, Olivia Prior chega a Gallant, a propriedade ancestral de sua família. Lá encontra parentes que parecem esconder algo e um mundo sombrio que existe além de uma parede, onde segredos e criaturas ameaçam atravessar.",
-    "genres": [],
+    "genres": [
+      "Fantasia sombria",
+      "Gótico",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Olivia Prior",
@@ -208,7 +234,9 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Hunter",
     "author": "Widjane Albuquerque",
     "synopsis": "Não encontrei uma sinopse pública confiável que permita confirmar com segurança o enredo desta edição de *Hunter*, atribuída a Widjane Albuquerque. Deixei a ficha sem personagens identificados para evitar atribuir a obra a um livro homônimo.",
-    "genres": [],
+    "genres": [
+      "Ficção"
+    ],
     "characters": [],
     "cover": "covers/start-6ff57c52-ccd6-555d-9bfe-5a52ae6a3b8e.jpg",
     "status": "Biblioteca",
@@ -224,7 +252,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Jogos de herança",
     "author": "Jennifer Lynn Barnes",
     "synopsis": "A adolescente Avery Grambs herda inesperadamente a fortuna de um bilionário que ela nunca conheceu. Para receber a herança, precisa viver na mansão da família, cercada pelos netos do falecido e por enigmas que podem explicar por que foi escolhida.",
-    "genres": [],
+    "genres": [
+      "Mistério",
+      "Suspense",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Avery Grambs",
@@ -257,7 +289,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Na ponta dos dedos",
     "author": "Sarah Waters",
     "synopsis": "Na Londres vitoriana, Sue Trinder, criada entre pequenos criminosos, aceita participar de um plano para enganar Maud Lilly, uma jovem herdeira isolada numa propriedade rural. Disfarces, segredos e mudanças de perspectiva transformam o golpe em uma trama de identidade, desejo e traição.",
-    "genres": [],
+    "genres": [
+      "Ficção histórica",
+      "Mistério",
+      "Romance LGBTQIA+"
+    ],
     "characters": [
       {
         "name": "Sue Trinder",
@@ -286,7 +322,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Objetos Cortantes",
     "author": "Flynn Gillian",
     "synopsis": "A jornalista Camille Preaker retorna à cidade natal para investigar o assassinato de duas meninas. Enquanto apura o caso, precisa enfrentar relações familiares abusivas e memórias dolorosas que preferia manter enterradas.",
-    "genres": [],
+    "genres": [
+      "Thriller psicológico",
+      "Mistério",
+      "Policial"
+    ],
     "characters": [
       {
         "name": "Camille Preaker",
@@ -315,7 +355,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Sem coração",
     "author": "Marissa Meyer",
     "synopsis": "Antes de se tornar a temida Rainha de Copas, Catherine Pinkerton é uma jovem apaixonada por confeitaria que sonha abrir uma padaria com a melhor amiga. Quando o rei pretende pedi-la em casamento, a chegada do misterioso bobo da corte Jest desperta sentimentos que entram em conflito com o destino que tentam impor a ela.",
-    "genres": [],
+    "genres": [
+      "Fantasia",
+      "Romance",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Catherine Pinkerton",
@@ -344,7 +388,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Zodiac Academy 1 The Awakening",
     "author": "Caroline Peckham, Susanne Valenti",
     "synopsis": "As gêmeas Darcy e Tory Vega descobrem que são feéricas e herdeiras de um trono no reino mágico de Solaria. Para reivindicar seu lugar, precisam estudar na Zodiac Academy, dominar poderes ligados aos elementos e sobreviver à hostilidade de quatro herdeiros que não pretendem ceder a coroa.",
-    "genres": [],
+    "genres": [
+      "Fantasia",
+      "Romance paranormal",
+      "Fantasia sombria"
+    ],
     "characters": [
       {
         "name": "Darcy Vega",
@@ -377,7 +425,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "The Maze Runner",
     "author": "James Dashner",
     "synopsis": "Thomas desperta sem memória em um elevador e chega a uma clareira habitada por garotos cercados por um labirinto gigantesco. Ao tentar encontrar uma saída, o grupo descobre que o lugar esconde perigos e experimentos misteriosos.",
-    "genres": [],
+    "genres": [
+      "Ficção científica",
+      "Distopia",
+      "Aventura"
+    ],
     "characters": [
       {
         "name": "Thomas",
@@ -410,7 +462,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Uma noite na Itália Como se diz eu te amo em italiano",
     "author": "Lucy Diamond",
     "synopsis": "Anna descobre que seu pai ausente é italiano e começa a aprender o idioma, sonhando em encontrá-lo. Nas aulas, ela conhece Catherine, que tenta reconstruir a vida após a saída dos filhos de casa e o abandono do marido, e Sophie, professora que deseja voltar a Sorrento. As aulas aproximam as três mulheres e trazem novas possibilidades.",
-    "genres": [],
+    "genres": [
+      "Romance",
+      "Ficção contemporânea",
+      "Drama"
+    ],
     "characters": [
       {
         "name": "Anna",
@@ -439,7 +495,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Uma questão de química",
     "author": "Bonnie Garmus",
     "synopsis": "Na década de 1960, a química Elizabeth Zott enfrenta o preconceito de uma sociedade que não aceita mulheres cientistas. Ao apresentar um programa de culinária na televisão, transforma receitas em aulas de ciência e desafia as expectativas impostas às mulheres.",
-    "genres": [],
+    "genres": [
+      "Ficção histórica",
+      "Drama",
+      "Ficção contemporânea"
+    ],
     "characters": [
       {
         "name": "Elizabeth Zott",
@@ -472,7 +532,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Um estranho sonhador",
     "author": "Laini Taylor",
     "synopsis": "Lazlo Strange, um bibliotecário órfão fascinado por uma cidade perdida, vê a chance de realizar seu sonho quando um grupo de guerreiros chega em busca de ajuda. A expedição revela magia, mistérios e verdades dolorosas sobre a cidade de Weep.",
-    "genres": [],
+    "genres": [
+      "Fantasia",
+      "Romance",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Lazlo Strange",
@@ -505,7 +569,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Úrsula",
     "author": "Maria Firmina Dos Reis",
     "synopsis": "Publicado em 1859, o romance acompanha o amor entre Úrsula e Tancredo, ameaçado pela violência e pelo poder de um parente da jovem. A narrativa também dá espaço à experiência de pessoas escravizadas, sobretudo por meio de Túlio e Mãe Susana, expondo a crueldade da escravidão e as desigualdades do Brasil oitocentista.",
-    "genres": [],
+    "genres": [
+      "Literatura clássica",
+      "Ficção histórica",
+      "Drama"
+    ],
     "characters": [
       {
         "name": "Úrsula",
@@ -542,7 +610,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Todo Esse Tempo",
     "author": "Rachael Lippincott",
     "synopsis": "Após um acidente de carro que mata sua namorada, Kyle acorda no hospital com a memória fragmentada e a vida irreconhecível. Em meio ao luto e à culpa, conhece Marley, uma garota que também enfrenta uma perda profunda. A aproximação dos dois o leva a questionar o que é real e o que significa seguir em frente.",
-    "genres": [],
+    "genres": [
+      "Romance",
+      "Drama",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Kyle",
@@ -571,7 +643,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Os Garotos Corvos",
     "author": "Stiefvater Maggie",
     "synopsis": "Blue Sargent, criada numa família de médiuns, aproxima-se de um grupo de garotos de uma escola particular que procura um antigo rei galês. A busca por linhas ley e profecias aproxima os jovens de forças sobrenaturais e de segredos pessoais.",
-    "genres": [],
+    "genres": [
+      "Fantasia",
+      "Mistério",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Blue Sargent",
@@ -608,7 +684,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "A Maldição do Vencedor",
     "author": "Marie Rutkoski",
     "synopsis": "A filha de um general conquistador compra um escravo em um leilão, mas descobre que ele é o líder de uma resistência secreta. A atração entre eles entra em conflito com lealdade, liberdade e as consequências de viver em lados opostos de uma guerra.",
-    "genres": [],
+    "genres": [
+      "Fantasia",
+      "Romance",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Kestrel",
@@ -633,7 +713,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Cinder",
     "author": "Meyer Marissa",
     "synopsis": "Em uma Nova Pequim futurista, Cinder é uma mecânica ciborgue que se vê envolvida em intrigas políticas e numa epidemia mortal. Sua vida muda quando conhece o príncipe Kai e descobre que seu passado guarda segredos capazes de alterar o destino do reino.",
-    "genres": [],
+    "genres": [
+      "Ficção científica",
+      "Fantasia",
+      "Retelling"
+    ],
     "characters": [
       {
         "name": "Cinder",
@@ -666,7 +750,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Jogador No 1",
     "author": "Ernest Cline",
     "synopsis": "Em um futuro marcado por desigualdade e escapismo virtual, Wade Watts participa de uma caça ao tesouro criada pelo fundador de um universo digital. Resolver os enigmas pode garantir fortuna e poder, mas uma corporação também quer vencer a disputa.",
-    "genres": [],
+    "genres": [
+      "Ficção científica",
+      "Distopia",
+      "Aventura"
+    ],
     "characters": [
       {
         "name": "Wade Watts / Parzival",
@@ -699,7 +787,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "O Diario de Bridget Jones",
     "author": "Fielding Helen",
     "synopsis": "Em forma de diário, Bridget Jones registra um ano de tentativas para melhorar a vida: equilibrar a carreira, cuidar de si e encontrar um relacionamento. Entre reuniões familiares, gafes e decisões amorosas, ela oscila entre o sedutor Daniel Cleaver e o reservado Mark Darcy, com humor e autocrítica.",
-    "genres": [],
+    "genres": [
+      "Romance",
+      "Comédia romântica",
+      "Ficção contemporânea"
+    ],
     "characters": [
       {
         "name": "Bridget Jones",
@@ -732,7 +824,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Os Dois Morrem No Final",
     "author": "Adam Silvera",
     "synopsis": "Em um mundo onde um serviço avisa as pessoas no dia em que vão morrer, Mateo e Rufus recebem o alerta e decidem viver um último dia significativo juntos. A jornada transforma o modo como enxergam medo, amizade e amor.",
-    "genres": [],
+    "genres": [
+      "Ficção científica",
+      "Drama",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Mateo Torrez",
@@ -757,7 +853,10 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Até o verão terminar",
     "author": "Colleen Hoover",
     "synopsis": "Beyah está a poucos meses de começar a universidade e deixar para trás uma infância marcada por abandono e dificuldades. Quando perde a casa, precisa passar o verão com o pai pouco presente e a nova família dele. Lá conhece Samson, um rapaz reservado, e a conexão entre os dois desafia as certezas que ela construiu para se proteger.",
-    "genres": [],
+    "genres": [
+      "Romance contemporâneo",
+      "Drama"
+    ],
     "characters": [
       {
         "name": "Beyah Grim",
@@ -790,7 +889,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Vilão",
     "author": "V.E. Schwab",
     "synopsis": "Victor Vale e Eli Cardale eram estudantes brilhantes que pesquisaram a relação entre adrenalina, experiências de quase morte e habilidades extraordinárias. Dez anos depois, uma experiência trágica os transformou em inimigos. Após escapar da prisão, Victor inicia uma busca por vingança, acompanhado por Sydney, enquanto Eli tenta eliminar pessoas com poderes.",
-    "genres": [],
+    "genres": [
+      "Fantasia sombria",
+      "Thriller",
+      "Super-heróis"
+    ],
     "characters": [
       {
         "name": "Victor Vale",
@@ -827,7 +930,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "A paciente silenciosa",
     "author": "Alex Michaelides",
     "synopsis": "A pintora Alicia Berenson é encontrada ao lado do marido morto e, depois disso, deixa de falar. Anos mais tarde, o psicoterapeuta Theo Faber assume o caso, determinado a descobrir o que aconteceu e por que Alicia permanece em silêncio.",
-    "genres": [],
+    "genres": [
+      "Thriller psicológico",
+      "Mistério",
+      "Suspense"
+    ],
     "characters": [
       {
         "name": "Alicia Berenson",
@@ -856,7 +963,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Manual de Assassinato para Boas Garotas",
     "author": "Holly Jackson",
     "synopsis": "Para um trabalho escolar, Pip Fitz-Amobi reabre um caso de assassinato encerrado cinco anos antes. Ao entrevistar pessoas e examinar provas, ela questiona a versão aceita pela cidade e percebe que procurar a verdade pode colocá-la em perigo.",
-    "genres": [],
+    "genres": [
+      "Mistério",
+      "Thriller",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Pip Fitz-Amobi",
@@ -889,7 +1000,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "A Maldição",
     "author": "Lourenço Seruya",
     "synopsis": "Quando o Teatro da Passagem decide encenar novamente a peça *A Pedra do Pecado*, proibida por décadas após mortes inexplicáveis durante apresentações anteriores, a estreia termina em homicídio. O inspetor Bruno Saraiva investiga a companhia e seus segredos, tentando descobrir se a tragédia é resultado de uma maldição ou de um crime cuidadosamente planejado.",
-    "genres": [],
+    "genres": [
+      "Mistério",
+      "Policial",
+      "Suspense"
+    ],
     "characters": [
       {
         "name": "Bruno Saraiva",
@@ -918,7 +1033,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "A Princesa, o Cappuccino e a Profecia de Apolo",
     "author": "G. B. Baldassari",
     "synopsis": "Cansada de repetir a mesma rotina de trabalho e faculdade, Laura decide tirar um dia de folga e acaba convencendo uma desconhecida que encontra em um café a acompanhá-la. O passeio improvisado se transforma em uma sequência de descobertas, encontros e decisões que muda o rumo da vida das duas.",
-    "genres": [],
+    "genres": [
+      "Romance",
+      "Comédia romântica",
+      "Romance LGBTQIA+"
+    ],
     "characters": [
       {
         "name": "Laura",
@@ -943,7 +1062,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Breaking Legacies",
     "author": "Zoe Reed",
     "synopsis": "Em um reino marcado por magia, disputas políticas e antigas tradições, a caçadora Erelan cruza o caminho da princesa Alora. O encontro coloca em choque deveres, segredos e sentimentos proibidos, enquanto as duas enfrentam forças que ameaçam o reino e os planos de quem deseja controlar seu futuro.",
-    "genres": [],
+    "genres": [
+      "Fantasia",
+      "Romance LGBTQIA+",
+      "Aventura"
+    ],
     "characters": [
       {
         "name": "Erelan",
@@ -968,7 +1091,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Fogo Estrelas",
     "author": "Audrey Coulthurst",
     "synopsis": "Prometida desde a infância ao príncipe de Mynaria, a princesa Dennaleia precisa esconder sua capacidade proibida de controlar o fogo. Em seu novo lar, sua professora de equitação é a irmã do noivo, a independente princesa Amaranthine (Mare). Quando um assassinato abala o reino, as duas investigam juntas e descobrem sentimentos que podem ameaçar a aliança política entre seus povos.",
-    "genres": [],
+    "genres": [
+      "Fantasia",
+      "Romance LGBTQIA+",
+      "Mistério"
+    ],
     "characters": [
       {
         "name": "Dennaleia (Denna)",
@@ -997,7 +1124,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Meu gato me odeia",
     "author": "Julia Rietjens",
     "synopsis": "Aos quinze anos, Sâmia queria um cachorro, mas acaba convivendo com Tirano, o gato que recebe de presente. Entre conflitos familiares, a amizade com Guga e a aproximação de uma garota, ela começa a entender melhor seus sentimentos e sua sexualidade.",
-    "genres": [],
+    "genres": [
+      "Ficção juvenil",
+      "Drama",
+      "Romance LGBTQIA+"
+    ],
     "characters": [
       {
         "name": "Sâmia",
@@ -1030,7 +1161,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "O Que os Vampiros Fazem no Sol",
     "author": "Helena Callado",
     "synopsis": "Flora Meyer cresceu sabendo que pertence a uma família de lobisomens e passou anos treinando seus poderes. Sua rotina muda quando Mia Wylder, uma vampira, chega à cidade. As duas descobrem que precisam superar a rivalidade histórica entre suas espécies após testemunharem um assassinato misterioso — e talvez a maior ameaça não seja a que imaginavam.",
-    "genres": [],
+    "genres": [
+      "Fantasia paranormal",
+      "Romance LGBTQIA+",
+      "Mistério"
+    ],
     "characters": [
       {
         "name": "Flora Meyer",
@@ -1059,7 +1194,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Querida Penelope",
     "author": "Arquelana",
     "synopsis": "Cleo Rodrigues trabalha em uma editora e divide o apartamento com a prima Lavínia. Depois de perder o emprego, aceita um trabalho inusitado: escrever cartas eróticas sob o pseudônimo Penelope para clientes influentes. A tarefa fica ainda mais complicada quando Marina Fonseca, sua ex-namorada escritora, volta à sua vida, e Cleo precisa recorrer a ela para recuperar a inspiração.",
-    "genres": [],
+    "genres": [
+      "Romance contemporâneo",
+      "Romance LGBTQIA+",
+      "Comédia romântica"
+    ],
     "characters": [
       {
         "name": "Cleo Rodrigues",
@@ -1088,7 +1227,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Sempre em Frente",
     "author": "Rainbow Rowell",
     "synopsis": "Simon Snow é considerado o Escolhido destinado a proteger o Mundo dos Magos, embora tenha dificuldade para controlar sua magia. Ao retornar à Escola de Magia de Watford, ele precisa lidar com o desaparecimento de seu colega de quarto e arqui-inimigo Baz, com uma ameaça conhecida como o Oco e com verdades que podem transformar sua relação com Baz.",
-    "genres": [],
+    "genres": [
+      "Fantasia",
+      "Romance LGBTQIA+",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Simon Snow",
@@ -1125,7 +1268,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Diário de Bordo de uma Impostora",
     "author": "G. B. Baldassari",
     "synopsis": "Em 1952, Jane Smith conquista a chance de trabalhar como comissária de bordo na companhia aérea Northern Star, mas só consegue o emprego assumindo a identidade de sua melhor amiga, Claire. A mentira parece administrável até que Charlotte, uma nova colega, percebe que há algo estranho. Entre voos luxuosos e segredos, Jane precisa decidir quem realmente deseja ser.",
-    "genres": [],
+    "genres": [
+      "Romance",
+      "Ficção histórica",
+      "Romance LGBTQIA+"
+    ],
     "characters": [
       {
         "name": "Jane Smith",
@@ -1154,7 +1301,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "A Jogada do Amor",
     "author": "Kelly Quindlen",
     "synopsis": "Scottie Zajac tenta superar a separação de Tally, sua ex-namorada e rival no basquete. Quando um acidente a coloca em contato com Irene Abraham, capitã das líderes de torcida e alguém com quem Scottie tem uma história difícil, as duas acabam envolvidas em um plano que aproxima pessoas que prefeririam manter distância.",
-    "genres": [],
+    "genres": [
+      "Romance LGBTQIA+",
+      "Comédia romântica",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Scottie Zajac",
@@ -1183,7 +1334,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Delilah Green não está nem aí",
     "author": "Ashley Herring Blake",
     "synopsis": "Delilah Green construiu uma carreira como fotógrafa em Nova York e não pretende voltar à cidade onde cresceu. Mas aceita fotografar o casamento de sua irmã postiça Astrid em Bright Falls e reencontra Claire Sutherland, amiga de infância dela. O plano de ir embora logo se complica quando Delilah se sente atraída por Claire e precisa rever as feridas familiares.",
-    "genres": [],
+    "genres": [
+      "Romance contemporâneo",
+      "Romance LGBTQIA+",
+      "Comédia romântica"
+    ],
     "characters": [
       {
         "name": "Delilah Green",
@@ -1216,7 +1371,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "A Lista da Sorte",
     "author": "Rachael Lippincott",
     "synopsis": "Depois da morte da mãe, Emily perde a conexão com a melhor amiga e sente que está parada no tempo. Ao encontrar uma lista de desejos que a mãe escreveu quando era jovem, decide cumprir as tarefas com a ajuda de uma nova amizade. A lista a leva a experimentar coisas novas, encarar o luto e descobrir quem deseja ser.",
-    "genres": [],
+    "genres": [
+      "Romance",
+      "Drama",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Emily",
@@ -1245,7 +1404,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "A Amiga Genial",
     "author": "Ferrante Elena",
     "synopsis": "Na Nápoles do pós-guerra, Elena Greco recorda a amizade intensa e competitiva com Raffaella Cerullo, conhecida como Lila. As duas crescem em um bairro pobre, cercadas por violência, expectativas familiares e poucas oportunidades para estudar. A trajetória de cada uma toma rumos diferentes, mas a comparação entre elas molda suas identidades por décadas.",
-    "genres": [],
+    "genres": [
+      "Ficção literária",
+      "Drama",
+      "Romance de formação"
+    ],
     "characters": [
       {
         "name": "Elena Greco (Lenù)",
@@ -1278,7 +1441,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Amêndoas",
     "author": "Won-pyung Sohn",
     "synopsis": "Yunjae nasceu com alexitimia, uma condição que dificulta reconhecer e expressar emoções. Criado pela mãe e pela avó para enfrentar um mundo que muitas vezes o considera estranho, ele vê sua rotina virar de cabeça para baixo depois de uma tragédia e da chegada de Gon, um adolescente agressivo que desafia seus limites. Uma amizade inesperada os transforma.",
-    "genres": [],
+    "genres": [
+      "Ficção contemporânea",
+      "Drama",
+      "Romance de formação"
+    ],
     "characters": [
       {
         "name": "Yunjae",
@@ -1311,7 +1478,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Boston boys",
     "author": "Giulia Paim",
     "synopsis": "A vida de Ronnie muda quando sua mãe consegue emprego como produtora de uma banda adolescente muito popular. De repente, os Boston Boys passam a fazer parte de sua rotina e Mason, o vocalista que ela considera insuportável, vai morar em sua casa. Entre compromissos de celebridade, provocações e aproximações inesperadas, Ronnie precisa se adaptar ao caos.",
-    "genres": [],
+    "genres": [
+      "Romance",
+      "Comédia romântica",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Ronnie",
@@ -1344,7 +1515,10 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Leitura de Verão",
     "author": "Emily Henry",
     "synopsis": "January Andrews escreve romances românticos, enquanto Augustus Everett prefere histórias literárias mais sombrias. Bloqueados criativamente e vizinhos de praia, os dois fazem um acordo: cada um escreverá um livro no estilo do outro. A pesquisa para os novos projetos os leva a conhecer vidas diferentes da própria e a rever suas crenças sobre amor e finais felizes.",
-    "genres": [],
+    "genres": [
+      "Romance contemporâneo",
+      "Comédia romântica"
+    ],
     "characters": [
       {
         "name": "January Andrews",
@@ -1373,7 +1547,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Luzes do Norte",
     "author": "Giulianna Domingues",
     "synopsis": "A caçadora Dimitria Coromandel sustenta a família em um inverno rigoroso e aceita trabalhar como chefe da guarda de Aurora van Vintermer, herdeira de uma família poderosa. O emprego parece uma solução prática, até que Dimitria se aproxima de Aurora, surgem sinais de um monstro que ataca crianças e a caçadora precisa conciliar dever, sentimentos e perigo.",
-    "genres": [],
+    "genres": [
+      "Fantasia",
+      "Romance LGBTQIA+",
+      "Mistério"
+    ],
     "characters": [
       {
         "name": "Dimitria Coromandel",
@@ -1406,7 +1584,10 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Uma segunda chance",
     "author": "Colleen Hoover",
     "synopsis": "Depois de cumprir uma pena de prisão por um acidente que mudou sua vida, Kenna retorna à cidade onde cresceu e tenta conhecer a filha, Diem, que nunca teve a oportunidade de criar. Os avós da menina se recusam a permitir a aproximação, mas Ledger, dono de um bar e ligado à família, oferece uma inesperada chance de esperança. O vínculo entre eles pode colocar tudo em risco.",
-    "genres": [],
+    "genres": [
+      "Romance contemporâneo",
+      "Drama"
+    ],
     "characters": [
       {
         "name": "Kenna Rowan",
@@ -1439,7 +1620,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "A leste do Éden",
     "author": "John Steinbeck",
     "synopsis": "Ao longo de gerações, as famílias Trask e Hamilton vivem dramas de ambição, rivalidade, amor e culpa no vale de Salinas, na Califórnia. A relação entre os irmãos Adam e Charles e, depois, entre os filhos Cal e Aron ecoa a história bíblica de Caim e Abel. O romance questiona se as pessoas estão condenadas a repetir os erros da família ou podem escolher outro caminho.",
-    "genres": [],
+    "genres": [
+      "Ficção literária",
+      "Ficção histórica",
+      "Saga familiar"
+    ],
     "characters": [
       {
         "name": "Adam Trask",
@@ -1480,7 +1665,10 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Box Trilogia O Senhor dos Anéis",
     "author": "J.R.R. Tolkien",
     "synopsis": "Na Terra-média, o hobbit Frodo recebe a missão de destruir o Um Anel, artefato que permite ao Senhor das Trevas Sauron dominar os povos livres. Com a ajuda de amigos, humanos, elfos e anões, a jornada atravessa regiões perigosas e testa a coragem, a amizade e o custo de resistir ao poder.",
-    "genres": [],
+    "genres": [
+      "Fantasia épica",
+      "Aventura"
+    ],
     "characters": [
       {
         "name": "Frodo Bolseiro",
@@ -1517,7 +1705,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Entrevista Com o Vampiro",
     "author": "Anne Rice",
     "synopsis": "Louis de Pointe du Lac conta a um jornalista a história de sua vida como vampiro, desde a transformação no século XVIII até as viagens por diferentes lugares e épocas. Ao lado do implacável Lestat e da jovem Claudia, Louis luta com a culpa de se alimentar de humanos e com as consequências de uma imortalidade que promete poder, mas também solidão.",
-    "genres": [],
+    "genres": [
+      "Terror gótico",
+      "Fantasia paranormal",
+      "Ficção histórica"
+    ],
     "characters": [
       {
         "name": "Louis de Pointe du Lac",
@@ -1550,7 +1742,10 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "O Hobbit",
     "author": "J.R.R. Tolkien",
     "synopsis": "Bilbo Bolseiro, um hobbit confortável com sua vida tranquila, é recrutado por Gandalf para acompanhar treze anões em uma jornada até a Montanha Solitária. O grupo pretende recuperar o tesouro e o reino tomado pelo dragão Smaug. Ao longo do caminho, Bilbo encontra criaturas perigosas, faz escolhas inesperadas e descobre sua própria coragem.",
-    "genres": [],
+    "genres": [
+      "Fantasia épica",
+      "Aventura"
+    ],
     "characters": [
       {
         "name": "Bilbo Bolseiro",
@@ -1583,7 +1778,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "O Labirinto Do Fauno",
     "author": "Guillermo del Toro, Cornelia Funke",
     "synopsis": "Na Espanha de 1944, a jovem Ofélia chega com a mãe à casa de um capitão brutal que combate os últimos resistentes ao franquismo. Em um antigo labirinto, ela encontra um fauno que afirma que ela é uma princesa de outro mundo e lhe impõe tarefas misteriosas. A fantasia sombria de Ofélia se entrelaça com a violência do mundo real.",
-    "genres": [],
+    "genres": [
+      "Fantasia sombria",
+      "Ficção histórica",
+      "Guerra"
+    ],
     "characters": [
       {
         "name": "Ofélia",
@@ -1620,7 +1819,10 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Amor(es) verdadeiro(s)",
     "author": "Taylor Jenkins Reid",
     "synopsis": "Depois de construir uma vida com Jesse, seu namorado da juventude, Emma acredita ter encontrado seu lugar no mundo. Quando Jesse desaparece em um acidente de helicóptero, ela tenta recomeçar a vida e se apaixona por Sam. Anos depois, o retorno inesperado de Jesse a obriga a decidir entre a história que viveu e a pessoa que se tornou.",
-    "genres": [],
+    "genres": [
+      "Romance contemporâneo",
+      "Drama"
+    ],
     "characters": [
       {
         "name": "Emma Blair",
@@ -1649,7 +1851,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Atmosfera",
     "author": "Taylor Jenkins Reid",
     "synopsis": "Em 1980, Joan Goodwin, professora de astrofísica apaixonada pelas estrelas, é selecionada para treinar como astronauta no Centro Espacial Johnson. Ao lado de uma equipe de candidatos excepcionais, ela se prepara para viajar ao espaço e descobre uma paixão inesperada, que a faz questionar o lugar que deseja ocupar no universo. Uma missão em 1984 muda tudo.",
-    "genres": [],
+    "genres": [
+      "Ficção histórica",
+      "Drama",
+      "Romance"
+    ],
     "characters": [
       {
         "name": "Joan Goodwin",
@@ -1690,7 +1896,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Carrie Soto está de volta",
     "author": "Taylor Jenkins Reid",
     "synopsis": "Carrie Soto é uma das maiores tenistas da história, conhecida pela determinação e pela competitividade. Ao ver seu recorde ameaçado por uma nova campeã, decide voltar às quadras aos 37 anos, apesar das críticas e das limitações físicas. Com a ajuda do pai e treinador, Javier, ela luta para provar que ainda pode competir — e aprende a encarar o esporte de outra maneira.",
-    "genres": [],
+    "genres": [
+      "Ficção contemporânea",
+      "Drama",
+      "Esportes"
+    ],
     "characters": [
       {
         "name": "Carrie Soto",
@@ -1723,7 +1933,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Daisy Jones and The Six",
     "author": "Taylor Jenkins Reid",
     "synopsis": "Na Los Angeles dos anos 1970, Daisy Jones é uma cantora talentosa e imprevisível, enquanto a banda The Six tenta alcançar o sucesso. Quando os dois caminhos se cruzam, a música os transforma em fenômeno mundial, mas tensões criativas, relacionamentos e vícios ameaçam o grupo. Décadas depois, os integrantes recontam a ascensão e a separação da banda.",
-    "genres": [],
+    "genres": [
+      "Ficção histórica",
+      "Drama",
+      "Música"
+    ],
     "characters": [
       {
         "name": "Daisy Jones",
@@ -1764,7 +1978,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Malibu renasce",
     "author": "Taylor Jenkins Reid",
     "synopsis": "Na véspera de uma grande festa em Malibu, em 1983, os quatro irmãos Riva se preparam para receber centenas de convidados. Nina, Jay, Hud e Kit são filhos de um cantor famoso e de uma mulher que os criou quase sozinha; a noite reúne antigos ressentimentos, desejos e segredos, até que uma festa aparentemente glamourosa desencadeia um incêndio e muda tudo.",
-    "genres": [],
+    "genres": [
+      "Ficção histórica",
+      "Drama",
+      "Saga familiar"
+    ],
     "characters": [
       {
         "name": "Nina Riva",
@@ -1801,7 +2019,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Os Sete Maridos de Evelyn Hugo",
     "author": "Taylor Jenkins Reid",
     "synopsis": "Uma lendária estrela de Hollywood decide contar a história de sua vida e de seus sete casamentos a uma jornalista relativamente desconhecida. À medida que a entrevista avança, surgem ambição, amores secretos e o verdadeiro motivo da escolha da biógrafa.",
-    "genres": [],
+    "genres": [
+      "Ficção histórica",
+      "Drama",
+      "Romance LGBTQIA+"
+    ],
     "characters": [
       {
         "name": "Evelyn Hugo",
@@ -1834,7 +2056,10 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Em outra vida, talvez",
     "author": "Taylor Jenkins Reid",
     "synopsis": "Após uma separação e uma mudança para Los Angeles, Hannah Martin reencontra Ethan, seu melhor amigo de infância. Uma noite decisiva se divide em duas possibilidades: em uma, ela vai embora com Ethan; na outra, fica com sua amiga Gabby. A partir daí, o romance acompanha caminhos alternativos e questiona como pequenas escolhas mudam os rumos de uma vida.",
-    "genres": [],
+    "genres": [
+      "Romance contemporâneo",
+      "Drama"
+    ],
     "characters": [
       {
         "name": "Hannah Martin",
@@ -1863,7 +2088,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "A hora da estrela",
     "author": "Clarice Lispector",
     "synopsis": "A jovem alagoana Macabéa vive no Rio de Janeiro, trabalha como datilógrafa e leva uma vida de pobreza e pouca visibilidade. Sua história é contada por Rodrigo S. M., narrador que questiona o próprio ato de narrar a vida de alguém socialmente ignorado. Entre um namoro frustrado e uma consulta à cartomante, a obra reflete sobre existência, desigualdade e representação.",
-    "genres": [],
+    "genres": [
+      "Literatura clássica",
+      "Ficção brasileira",
+      "Drama"
+    ],
     "characters": [
       {
         "name": "Macabéa",
@@ -1900,7 +2129,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Dias perfeitos",
     "author": "Montes Raphael",
     "synopsis": "Téo, um estudante de medicina solitário, conhece Clarice, uma jovem que sonha escrever roteiros de cinema, e desenvolve uma obsessão por ela. Quando Clarice o rejeita, Téo decide sequestrá-la e recriar a viagem descrita no roteiro que ela está escrevendo. O suspense acompanha o plano doentio de Téo e a luta de Clarice para escapar.",
-    "genres": [],
+    "genres": [
+      "Thriller psicológico",
+      "Suspense",
+      "Policial"
+    ],
     "characters": [
       {
         "name": "Téo",
@@ -1929,7 +2162,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Jantar secreto",
     "author": "Raphael Montes",
     "synopsis": "Quatro amigos deixam uma cidade do Paraná para tentar construir a vida no Rio de Janeiro, mas as contas atrasadas ameaçam seus planos. Para levantar dinheiro, organizam jantares clandestinos para clientes ricos. O negócio cresce e revela um esquema criminoso cada vez mais brutal, obrigando os jovens a encarar a própria ambição e os limites que ultrapassaram.",
-    "genres": [],
+    "genres": [
+      "Thriller",
+      "Terror",
+      "Policial"
+    ],
     "characters": [
       {
         "name": "Dante",
@@ -1962,7 +2199,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "O Centro de Todo o Caos",
     "author": "Marina Feijóo",
     "synopsis": "Em meio a uma crise profunda, a protagonista deixa seu estado e tenta recomeçar longe de tudo que conhece. Seis meses depois, precisa voltar às origens e percebe que a vida seguiu sem ela. Sem o apoio esperado, procura uma ex-namorada, enquanto a narrativa em prosa e poesia atravessa temas como saúde mental, amor, luto e reconstrução.",
-    "genres": [],
+    "genres": [
+      "Ficção contemporânea",
+      "Drama",
+      "Poesia em prosa"
+    ],
     "characters": [
       {
         "name": "A protagonista",
@@ -1987,7 +2228,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Pequena coreografia do adeus",
     "author": "Aline Bei",
     "synopsis": "Julia cresce entre relações familiares dolorosas, marcada pela separação dos pais, pela violência emocional e pela dificuldade de se sentir pertencente. A escrita torna-se uma forma de compreender a infância e reorganizar as lembranças. Em uma narrativa fragmentada e intensa, o romance acompanha sua busca por autonomia, afeto e uma voz própria.",
-    "genres": [],
+    "genres": [
+      "Ficção literária",
+      "Drama",
+      "Romance de formação"
+    ],
     "characters": [
       {
         "name": "Julia",
@@ -2016,7 +2261,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Torto arado",
     "author": "Itamar Vieira Junior",
     "synopsis": "No sertão da Bahia, as irmãs Bibiana e Belonísia encontram uma antiga faca e um acidente as liga de maneira irreversível. Criadas em uma comunidade rural submetida à exploração e à herança da escravidão, elas enfrentam destinos diferentes enquanto tentam defender a terra, a memória e a dignidade de seu povo.",
-    "genres": [],
+    "genres": [
+      "Ficção brasileira",
+      "Ficção literária",
+      "Drama"
+    ],
     "characters": [
       {
         "name": "Bibiana",
@@ -2049,7 +2298,10 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Tudo é rio",
     "author": "Carla Madeira",
     "synopsis": "Dalva e Venâncio formam um casal cuja relação é profundamente marcada pelo amor e pela violência. Após uma tragédia, o ressentimento toma conta da casa e os dois seguem caminhos difíceis, enquanto Lucy, uma mulher que vive do desejo alheio, passa a cruzar suas vidas. O romance explora as contradições entre paixão, perdão, culpa e sofrimento.",
-    "genres": [],
+    "genres": [
+      "Ficção literária",
+      "Drama"
+    ],
     "characters": [
       {
         "name": "Dalva",
@@ -2078,7 +2330,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Uma Pitada de Sorte",
     "author": "G. B. Baldassari",
     "synopsis": "Amélia é uma jovem chef que sonha vencer na alta gastronomia, mas acumula reveses profissionais e amorosos. Em Buenos Aires, decide deixar seu endereço de e-mail dentro de seu livro favorito antes de vendê-lo em um sebo, na esperança de que o acaso a ajude a conhecer a garota dos sonhos. A decisão dá início a uma jornada romântica cheia de confusões e amizades.",
-    "genres": [],
+    "genres": [
+      "Romance contemporâneo",
+      "Romance LGBTQIA+",
+      "Comédia romântica"
+    ],
     "characters": [
       {
         "name": "Amélia",
@@ -2103,7 +2359,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Véspera",
     "author": "Carla Madeira",
     "synopsis": "Vedina atravessa uma crise familiar e emocional que a leva a revisitar lembranças, silêncios e escolhas que marcaram sua história. A narrativa alterna tempos e perspectivas para revelar a fratura de uma família e os segredos que se acumulam antes de um acontecimento decisivo, explorando maternidade, abandono, culpa e os caminhos da violência.",
-    "genres": [],
+    "genres": [
+      "Ficção literária",
+      "Drama",
+      "Suspense"
+    ],
     "characters": [
       {
         "name": "Vedina",
@@ -2132,7 +2392,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Suicidas",
     "author": "Raphael Montes",
     "synopsis": "Depois que nove jovens de famílias privilegiadas são encontrados mortos em um porão, a polícia tenta reconstruir o que aconteceu durante uma roleta-russa. A investigação se concentra em manuscritos deixados por Alessandro, que relatam os acontecimentos e suas relações com os outros participantes. À medida que as versões se cruzam, fica difícil distinguir verdade, manipulação e culpa.",
-    "genres": [],
+    "genres": [
+      "Thriller",
+      "Mistério",
+      "Policial"
+    ],
     "characters": [
       {
         "name": "Alessandro",
@@ -2161,7 +2425,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "A Cantiga dos Pássaros e das Serpentes",
     "author": "Suzanne Collins",
     "synopsis": "Décadas antes dos Jogos Vorazes de Katniss, Coriolanus Snow, de dezoito anos, recebe a tarefa de orientar Lucy Gray Baird, tributo do empobrecido Distrito 12. Ele enxerga nos Jogos uma oportunidade para restaurar o prestígio da família, mas a inteligência e a presença de Lucy mudam a relação entre mentor e tributo e revelam como a ambição pode alimentar a crueldade.",
-    "genres": [],
+    "genres": [
+      "Distopia",
+      "Ficção científica",
+      "Thriller"
+    ],
     "characters": [
       {
         "name": "Coriolanus Snow",
@@ -2194,7 +2462,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "A Esperança - Jogos Vorazes 3",
     "author": "Suzanne Collins",
     "synopsis": "Depois de sobreviver a mais uma edição dos Jogos, Katniss chega ao Distrito 13, que lidera a rebelião contra a Capital. Transformada no símbolo da resistência, o Tordo, ela precisa enfrentar a propaganda, a guerra e as consequências psicológicas do conflito, enquanto tenta salvar Peeta e decidir em quem confiar.",
-    "genres": [],
+    "genres": [
+      "Distopia",
+      "Ficção científica",
+      "Aventura"
+    ],
     "characters": [
       {
         "name": "Katniss Everdeen",
@@ -2231,7 +2503,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Amanhecer na colheita",
     "author": "Suzanne Collins",
     "synopsis": "Vinte e quatro anos antes da história de Katniss, Haymitch Abernathy é sorteado para participar do segundo Massacre Quaternário, uma edição dos Jogos que dobra o número de tributos. Longe da arena, os moradores do Distrito 12 lidam com medo e opressão; dentro dela, Haymitch precisa usar inteligência e resistência para sobreviver a um espetáculo cada vez mais cruel.",
-    "genres": [],
+    "genres": [
+      "Distopia",
+      "Ficção científica",
+      "Aventura"
+    ],
     "characters": [
       {
         "name": "Haymitch Abernathy",
@@ -2264,7 +2540,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Em Chamas Jogos Vorazes 2",
     "author": "Suzanne Collins",
     "synopsis": "Após vencer os Jogos, Katniss e Peeta tentam retomar a vida, mas seu gesto de desafio inspirou resistência nos distritos. O presidente Snow exige que Katniss convença o país de que tudo foi por amor; quando a revolta cresce, o Massacre Quaternário traz uma nova ameaça e obriga os vencedores a voltar à arena.",
-    "genres": [],
+    "genres": [
+      "Distopia",
+      "Ficção científica",
+      "Aventura"
+    ],
     "characters": [
       {
         "name": "Katniss Everdeen",
@@ -2301,7 +2581,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Jogos vorazes",
     "author": "Suzanne Collins",
     "synopsis": "Katniss Everdeen se oferece para ocupar o lugar da irmã nos Jogos Vorazes, uma competição televisionada em que jovens de distritos oprimidos lutam até restar um sobrevivente. Para voltar para casa, precisa equilibrar estratégia, sobrevivência e os símbolos que suas ações criam.",
-    "genres": [],
+    "genres": [
+      "Distopia",
+      "Ficção científica",
+      "Aventura"
+    ],
     "characters": [
       {
         "name": "Katniss Everdeen",
@@ -2334,7 +2618,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Flores Para Algernon",
     "author": "Daniel Keyes",
     "synopsis": "Charlie Gordon, um homem com deficiência intelectual que deseja aprender mais, é escolhido para um procedimento experimental capaz de aumentar sua inteligência. Os relatórios que escreve registram as mudanças em seu pensamento, suas relações e suas memórias. Ao lado de Algernon, o rato que passou pelo mesmo procedimento, Charlie descobre que o conhecimento pode trazer possibilidades, mas também novas formas de dor.",
-    "genres": [],
+    "genres": [
+      "Ficção científica",
+      "Drama",
+      "Ficção psicológica"
+    ],
     "characters": [
       {
         "name": "Charlie Gordon",
@@ -2367,7 +2655,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Talvez você deva conversar com alguém uma terapeuta, o terapeuta dela e a vida de todos nós",
     "author": "Lori Gottlieb",
     "synopsis": "A psicoterapeuta Lori Gottlieb passa por uma crise pessoal e procura terapia com Wendell, ao mesmo tempo que continua atendendo pacientes cujas histórias a fazem refletir sobre suas próprias escolhas. Entre humor, vulnerabilidade e relatos de sessões, o livro mostra como o processo terapêutico pode transformar tanto quem busca ajuda quanto quem a oferece.",
-    "genres": [],
+    "genres": [
+      "Não ficção",
+      "Memórias",
+      "Psicologia"
+    ],
     "characters": [
       {
         "name": "Lori Gottlieb",
@@ -2404,7 +2696,10 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Uma vida pequena",
     "author": "Hanya Yanagihara",
     "synopsis": "Quatro amigos chegam a Nova York tentando construir carreiras e vidas adultas, mas o centro de suas histórias é Jude St. Francis, um advogado brilhante e reservado que esconde um passado de violência e trauma. Ao longo de décadas, a amizade, a arte e o cuidado oferecem momentos de afeto, mas não apagam facilmente as feridas que moldam a maneira como Jude se vê.",
-    "genres": [],
+    "genres": [
+      "Ficção literária",
+      "Drama"
+    ],
     "characters": [
       {
         "name": "Jude St. Francis",
@@ -2441,7 +2736,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Verity",
     "author": "Colleen Hoover",
     "synopsis": "A escritora Lowen Ashleigh é contratada para terminar os livros de Verity Crawford, autora best-seller incapacitada após um acidente. Hospedada na casa da família, Lowen encontra um manuscrito que parece revelar segredos perturbadores sobre Verity e seus filhos. À medida que se aproxima do marido da escritora, Jeremy, ela precisa decidir se acredita no texto, na aparência da família ou em outra versão da verdade.",
-    "genres": [],
+    "genres": [
+      "Thriller psicológico",
+      "Suspense",
+      "Romance"
+    ],
     "characters": [
       {
         "name": "Lowen Ashleigh",
@@ -2474,7 +2773,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Alice no país das maravilhas",
     "author": "Lewis Carroll",
     "synopsis": "Ao seguir um Coelho Branco apressado, Alice cai em um mundo absurdo onde tamanhos mudam, conversas desafiam a lógica e criaturas seguem regras próprias. Em encontros com um gato enigmático, um Chapeleiro excêntrico e a autoritária Rainha de Copas, a menina tenta compreender o País das Maravilhas e encontrar o caminho de volta.",
-    "genres": [],
+    "genres": [
+      "Fantasia",
+      "Literatura clássica",
+      "Ficção juvenil"
+    ],
     "characters": [
       {
         "name": "Alice",
@@ -2511,7 +2814,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Fallen",
     "author": "Kate Lauren",
     "synopsis": "Após um incidente trágico, Lucinda Price é enviada para um internato repleto de jovens problemáticos, onde sente uma atração intensa por Daniel Grigori e desconfia do enigmático Cam. Os dois rapazes parecem conhecer segredos sobre ela que ninguém explica. Conforme visões e acontecimentos estranhos se acumulam, Luce descobre que sua vida está ligada a uma antiga disputa sobrenatural.",
-    "genres": [],
+    "genres": [
+      "Fantasia paranormal",
+      "Romance",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Lucinda (Luce) Price",
@@ -2544,7 +2851,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "A queda dos Reinos",
     "author": "Rhodes Morgan",
     "synopsis": "No continente de Mítica, uma paz frágil desmorona quando três reinos disputam poder e recursos. Os destinos de quatro jovens — a princesa Cleo, o príncipe Magnus, o rebelde Jonas e a princesa adotiva Lucia — se entrelaçam em meio a traições, profecias, magia esquecida e amores perigosos.",
-    "genres": [],
+    "genres": [
+      "Fantasia épica",
+      "Aventura",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Cleo Bellos",
@@ -2577,7 +2888,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "A Sociedade de Atlas",
     "author": "Olivie Blake",
     "synopsis": "A cada década, seis mágicos excepcionais são convidados a tentar entrar para a Sociedade Alexandrina, uma instituição secreta que promete conhecimento, poder e prestígio. Libby, Nico, Reina, Parisa, Callum e Tristan têm um ano para provar seu valor e resolver enigmas sobre a realidade. Mas apenas cinco poderão concluir a iniciação, e o conhecimento cobra um preço.",
-    "genres": [],
+    "genres": [
+      "Fantasia",
+      "Dark academia",
+      "Suspense"
+    ],
     "characters": [
       {
         "name": "Libby Rhodes",
@@ -2622,7 +2937,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "A história secreta",
     "author": "Donna Tartt",
     "synopsis": "Richard Papen, estudante de origem modesta, ingressa em um pequeno grupo de alunos de estudos clássicos liderado pelo carismático professor Julian Morrow. Fascinado pela sofisticação do grupo, Richard participa de uma experiência que termina em morte. A partir daí, a narrativa revela gradualmente como idealismo, privilégio e culpa podem aproximar os jovens de um desastre.",
-    "genres": [],
+    "genres": [
+      "Ficção literária",
+      "Dark academia",
+      "Thriller psicológico"
+    ],
     "characters": [
       {
         "name": "Richard Papen",
@@ -2667,7 +2986,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "E não sobrou nenhum",
     "author": "Agatha Christie",
     "synopsis": "Dez desconhecidos são convidados para uma ilha isolada, mas o anfitrião não aparece. Durante o jantar, uma gravação acusa cada um deles de esconder um crime. Um a um, os convidados começam a morrer de formas que parecem seguir uma antiga cantiga infantil. Sem comunicação com o continente, os sobreviventes tentam descobrir quem está por trás dos assassinatos.",
-    "genres": [],
+    "genres": [
+      "Mistério",
+      "Policial",
+      "Suspense"
+    ],
     "characters": [
       {
         "name": "Vera Claythorne",
@@ -2704,7 +3027,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Matéria Escura",
     "author": "Blake Crouch",
     "synopsis": "Jason Dessen é sequestrado e desperta em uma realidade em que sua esposa não é sua esposa e seu filho nunca nasceu. Nesta versão do mundo, ele é um físico brilhante que realizou algo extraordinário. Desorientado entre vidas possíveis, Jason tenta encontrar o caminho de volta à família e enfrenta perguntas sobre identidade, escolhas e o preço de desejar uma vida diferente.",
-    "genres": [],
+    "genres": [
+      "Ficção científica",
+      "Thriller",
+      "Suspense"
+    ],
     "characters": [
       {
         "name": "Jason Dessen",
@@ -2737,7 +3064,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "O Ceifador",
     "author": "Shusterman Neal",
     "synopsis": "Em um futuro em que a humanidade venceu a morte e as máquinas administram quase tudo, os ceifadores são responsáveis por controlar a população de forma permanente. Citra e Rowan são escolhidos como aprendizes do ceifador Faraday, mas nenhum dos dois deseja esse destino. Ao competir por uma posição que exige matar, eles precisam decidir que tipo de pessoas querem se tornar.",
-    "genres": [],
+    "genres": [
+      "Distopia",
+      "Ficção científica",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Citra Terranova",
@@ -2770,7 +3101,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Recursão",
     "author": "Blake Crouch",
     "synopsis": "Barry Sutton, um detetive de Nova York, investiga uma série de casos ligados à Síndrome da Falsa Memória, que faz pessoas se lembrarem de vidas que nunca viveram. Ao mesmo tempo, a neurocientista Helena Smith desenvolve uma tecnologia destinada a tratar o Alzheimer. Quando as duas histórias se cruzam, memórias, tempo e realidade começam a colapsar.",
-    "genres": [],
+    "genres": [
+      "Ficção científica",
+      "Thriller",
+      "Suspense"
+    ],
     "characters": [
       {
         "name": "Barry Sutton",
@@ -2799,7 +3134,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Tudo o que nunca contei",
     "author": "NG Celeste",
     "synopsis": "Quando Lydia Lee, de dezesseis anos, desaparece e seu corpo é encontrado em um lago, a família sino-americana tenta entender o que aconteceu. Enquanto a investigação avança, surgem expectativas parentais, sonhos abandonados e ressentimentos que cada integrante escondia. O mistério expõe como pessoas que vivem sob o mesmo teto podem não conhecer umas às outras.",
-    "genres": [],
+    "genres": [
+      "Ficção literária",
+      "Drama",
+      "Mistério"
+    ],
     "characters": [
       {
         "name": "Lydia Lee",
@@ -2832,7 +3171,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Um Lugar Bem Longe Daqui",
     "author": "Delia Owens",
     "synopsis": "Kya Clark cresce praticamente sozinha nos pântanos da Carolina do Norte, abandonada pela família e rejeitada pela comunidade que a chama de Menina do Brejo. Enquanto aprende a sobreviver e desenvolve uma conexão profunda com a natureza, ela se aproxima de dois rapazes. Quando um deles é encontrado morto, Kya se torna a principal suspeita e precisa enfrentar os preconceitos da cidade.",
-    "genres": [],
+    "genres": [
+      "Mistério",
+      "Drama",
+      "Romance de formação"
+    ],
     "characters": [
       {
         "name": "Kya Clark",
@@ -2865,7 +3208,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "A Lista de Convidados",
     "author": "Lucy Foley",
     "synopsis": "Um casamento luxuoso reúne convidados em uma ilha isolada na costa da Irlanda. O noivo é uma estrela de televisão e a noiva, uma editora de revista; amigos e familiares trazem ressentimentos que ameaçam a celebração. Quando a tempestade deixa todos presos e um corpo é encontrado, cada convidado se torna suspeito.",
-    "genres": [],
+    "genres": [
+      "Mistério",
+      "Thriller",
+      "Policial"
+    ],
     "characters": [
       {
         "name": "Jules Keegan",
@@ -2902,7 +3249,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Metamorfose",
     "author": "Kafka, Franz",
     "synopsis": "Gregor Samsa acorda certa manhã transformado em um inseto monstruoso e, surpreendentemente, sua primeira preocupação é o atraso no trabalho. Incapaz de continuar sustentando a família, ele se torna fonte de medo, vergonha e conflito dentro de casa. A narrativa acompanha o isolamento de Gregor e a mudança na maneira como seus familiares o tratam.",
-    "genres": [],
+    "genres": [
+      "Literatura clássica",
+      "Ficção filosófica",
+      "Ficção surrealista"
+    ],
     "characters": [
       {
         "name": "Gregor Samsa",
@@ -2935,7 +3286,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Filho Dourado",
     "author": "Pierce Brown",
     "synopsis": "Depois de infiltrar-se na elite dourada de Marte e sobreviver a uma formação brutal, Darrow passa a atuar no centro das disputas pelo poder. A guerra política e militar se intensifica, e ele precisa manter sua identidade secreta enquanto navega por alianças traiçoeiras, amizades frágeis e escolhas que podem comprometer a revolução que jurou liderar.",
-    "genres": [],
+    "genres": [
+      "Ficção científica",
+      "Distopia",
+      "Space opera"
+    ],
     "characters": [
       {
         "name": "Darrow",
@@ -2968,7 +3323,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Prazeres Violentos",
     "author": "Chloe Gong, Rafael Surgek",
     "synopsis": "Xangai, 1926: duas gangues rivais se preparam para disputar poder nas ruas, enquanto uma doença misteriosa ameaça a cidade. Juliette Cai, herdeira da Gangue Escarlate, e Roma Montagov, herdeiro dos russos Brancos, precisam deixar de lado o ódio herdado quando os ataques começam a atingir os dois grupos. A aliança reacende sentimentos que ambos deveriam ter enterrado.",
-    "genres": [],
+    "genres": [
+      "Fantasia histórica",
+      "Romance",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Juliette Cai",
@@ -3001,7 +3360,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Quão bela e brutal é a vida",
     "author": "Cory Anderson",
     "synopsis": "Jack tinha um plano simples: proteger o irmão mais novo, Matty, e garantir que os dois continuassem juntos. Quando uma quantia de dinheiro roubado aparece e pessoas perigosas começam a persegui-los, Jack se vê preso entre escapar com o irmão e enfrentar o passado violento que ameaça alcançá-los. Uma história de sobrevivência, lealdade e escolhas morais em um cenário implacável.",
-    "genres": [],
+    "genres": [
+      "Thriller",
+      "Suspense",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Jack",
@@ -3034,7 +3397,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Fúria Vermelha",
     "author": "Pierce Brown",
     "synopsis": "Darrow trabalha nas minas de Marte acreditando que sua comunidade está preparando o planeta para as futuras gerações. Após uma perda brutal, descobre que os vermelhos vivem sob um sistema de castas que os mantém escravizados. Transformado e infiltrado entre os dourados, ele participa de uma competição letal para destruir a hierarquia por dentro.",
-    "genres": [],
+    "genres": [
+      "Ficção científica",
+      "Distopia",
+      "Space opera"
+    ],
     "characters": [
       {
         "name": "Darrow",
@@ -3071,7 +3438,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "It A coisa",
     "author": "Stephen King",
     "synopsis": "Em Derry, crianças começam a desaparecer e um grupo de amigos percebe que uma entidade antiga se alimenta do medo e assume formas diferentes, frequentemente a de um palhaço chamado Pennywise. Os integrantes do Clube dos Otários fazem um pacto para enfrentar a criatura, cuja influência atravessa décadas e continua assombrando suas vidas adultas.",
-    "genres": [],
+    "genres": [
+      "Terror",
+      "Sobrenatural",
+      "Ficção psicológica"
+    ],
     "characters": [
       {
         "name": "Bill Denbrough",
@@ -3112,7 +3483,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Misery Louca Obsessao",
     "author": "Stephen King",
     "synopsis": "Após um acidente de carro durante uma nevasca, o escritor Paul Sheldon é resgatado pela enfermeira aposentada Annie Wilkes, sua fã número um. Quando descobre que ele matou sua personagem favorita, Misery, no último romance, Annie o mantém preso e exige que escreva uma continuação. A relação entre autor e leitora transforma-se em um terror psicológico claustrofóbico.",
-    "genres": [],
+    "genres": [
+      "Terror psicológico",
+      "Thriller psicológico",
+      "Suspense"
+    ],
     "characters": [
       {
         "name": "Paul Sheldon",
@@ -3141,7 +3516,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Sr. Mercedes",
     "author": "Stephen King",
     "synopsis": "Meses depois de um motorista atropelar uma multidão com um Mercedes e escapar, o detetive aposentado Bill Hodges recebe uma carta provocadora do criminoso. A obsessão pelo caso o tira da apatia e o leva a investigar novamente, com ajuda de aliados improváveis, antes que o assassino concretize um plano ainda mais devastador.",
-    "genres": [],
+    "genres": [
+      "Policial",
+      "Thriller",
+      "Crime"
+    ],
     "characters": [
       {
         "name": "Bill Hodges",
@@ -3174,7 +3553,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "A prisão do rei",
     "author": "Victoria Aveyard",
     "synopsis": "Depois de ser capturada, Mare Barrow permanece presa no palácio de Maven e tem seus poderes neutralizados. Enquanto enfrenta o rei que a traiu, a Guarda Escarlate abandona a clandestinidade e prepara a revolução. Cal, exilado entre os rebeldes, luta para resgatá-la e decide de que lado ficará quando a guerra se aproximar.",
-    "genres": [],
+    "genres": [
+      "Fantasia",
+      "Distopia",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Mare Barrow",
@@ -3207,7 +3590,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "A Rainha Vermelha",
     "author": "Aveyard Victoria",
     "synopsis": "Mare Barrow vive numa sociedade dividida pelo sangue: os vermelhos comuns servem aos prateados, uma elite com poderes extraordinários. Quando descobre uma habilidade própria, Mare é arrastada para a corte e para uma rebelião que ameaça o reino.",
-    "genres": [],
+    "genres": [
+      "Fantasia",
+      "Distopia",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Mare Barrow",
@@ -3240,7 +3627,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Espada de vidro",
     "author": "Aveyard Victoria",
     "synopsis": "Fugitiva após descobrir que não é a única pessoa de sangue vermelho com poderes, Mare Barrow parte em busca de outros sanguenovos para protegê-los do rei Maven. Cada novo aliado fortalece a rebelião, mas também aumenta a tensão entre Mare e os que a acompanham, que precisam decidir se lutam por liberdade ou por poder.",
-    "genres": [],
+    "genres": [
+      "Fantasia",
+      "Distopia",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Mare Barrow",
@@ -3277,7 +3668,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Tempestade de guerra",
     "author": "Aveyard Victoria",
     "synopsis": "Com Norta à beira de uma guerra total, Mare precisa reunir aliados e continuar lutando pela liberdade dos vermelhos e sanguenovos. Apesar da traição que sofreu, ela percebe que derrotar Maven pode exigir uma aliança com Cal e com forças prateadas. A obsessão do rei por Mare torna o conflito tão pessoal quanto político.",
-    "genres": [],
+    "genres": [
+      "Fantasia",
+      "Distopia",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Mare Barrow",
@@ -3310,7 +3705,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Trono destruído",
     "author": "Aveyard Victoria",
     "synopsis": "Esta coletânea reúne contos, histórias complementares e material que amplia o universo de *A Rainha Vermelha*. As narrativas acompanham personagens antes, durante e depois da guerra, trazendo novas perspectivas sobre a Guarda Escarlate, a família real e as consequências das escolhas feitas por Mare e seus aliados.",
-    "genres": [],
+    "genres": [
+      "Fantasia",
+      "Distopia",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Mare Barrow",
@@ -3343,7 +3742,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Aceita-me",
     "author": "Tahereh Mafi",
     "synopsis": "Nesta novela complementar de *Estilhaça-me*, a história se aproxima do desfecho romântico de Juliette e Warner após a queda do Restabelecimento. Enquanto os sobreviventes tentam estabilizar um mundo devastado, o casal precisa encontrar espaço para uma vida juntos em meio a responsabilidades políticas, feridas antigas e incertezas.",
-    "genres": [],
+    "genres": [
+      "Ficção científica",
+      "Distopia",
+      "Romance"
+    ],
     "characters": [
       {
         "name": "Juliette Ferrars",
@@ -3372,7 +3775,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Desafia-me",
     "author": "Tahereh Mafi",
     "synopsis": "Depois de uma revelação que muda tudo o que Juliette acreditava sobre o Restabelecimento, a resistência enfrenta novos perigos e alianças instáveis. Juliette precisa lidar com a possibilidade de que sua identidade e seu passado tenham sido manipulados, enquanto Warner, Kenji e os demais tentam entender quem controla os acontecimentos.",
-    "genres": [],
+    "genres": [
+      "Ficção científica",
+      "Distopia",
+      "Romance"
+    ],
     "characters": [
       {
         "name": "Juliette Ferrars",
@@ -3405,7 +3812,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Destrua-me",
     "author": "Tahereh Mafi",
     "synopsis": "Narrada pelo ponto de vista de Warner, esta novela mostra o que acontece depois que Juliette escapa do Setor 45. Ferido e pressionado a conter qualquer sinal de rebelião, Warner tenta encontrá-la, mas a chegada de seu pai, o comandante supremo do Restabelecimento, revela que as intenções do regime são ainda mais perigosas do que ele imaginava.",
-    "genres": [],
+    "genres": [
+      "Ficção científica",
+      "Distopia",
+      "Romance"
+    ],
     "characters": [
       {
         "name": "Aaron Warner",
@@ -3434,7 +3845,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Estilhaça-me",
     "author": "Tahereh Mafi",
     "synopsis": "Juliette Ferrars está isolada há meses porque seu toque pode ferir ou matar. Quando o Restabelecimento decide usar seu poder como arma, ela é retirada do confinamento e levada por Warner, um comandante que quer controlá-la. Com ajuda de Adam, um soldado com quem tem uma ligação antiga, Juliette tenta escapar e descobrir se pode transformar sua condição em força.",
-    "genres": [],
+    "genres": [
+      "Ficção científica",
+      "Distopia",
+      "Romance"
+    ],
     "characters": [
       {
         "name": "Juliette Ferrars",
@@ -3467,7 +3882,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Fragmenta-Me",
     "author": "Tahereh Mafi",
     "synopsis": "Esta novela acompanha Adam Kent após os acontecimentos de *Estilhaça-me*. Enquanto tenta proteger Juliette e seu irmão James, Adam luta com o medo de perder as pessoas que ama e com as responsabilidades da resistência. O relato amplia sua perspectiva sobre o conflito contra Warner e o Restabelecimento.",
-    "genres": [],
+    "genres": [
+      "Ficção científica",
+      "Distopia",
+      "Romance"
+    ],
     "characters": [
       {
         "name": "Adam Kent",
@@ -3500,7 +3919,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Imagina-me",
     "author": "Tahereh Mafi",
     "synopsis": "Agora que Ella sabe mais sobre sua identidade e sobre os experimentos que a criaram, o passado de Juliette se torna ainda mais confuso. Com antigos inimigos se aproximando e o Restabelecimento à beira de uma batalha decisiva, ela precisa compreender quem é e escolher o lado que pretende defender, mesmo que isso signifique confrontar partes de si mesma.",
-    "genres": [],
+    "genres": [
+      "Ficção científica",
+      "Distopia",
+      "Romance"
+    ],
     "characters": [
       {
         "name": "Ella / Juliette Ferrars",
@@ -3533,7 +3956,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Incendeia-me",
     "author": "Tahereh Mafi",
     "synopsis": "Após a queda do Ponto Ômega, Juliette acredita ter perdido seus aliados e precisa encontrar uma forma de derrotar o Restabelecimento. Para enfrentar Warner e o regime, ela acaba formando uma aliança inesperada com o próprio Warner. A parceria revela que muitas das certezas de Juliette sobre seus poderes, Adam e o inimigo estavam erradas.",
-    "genres": [],
+    "genres": [
+      "Ficção científica",
+      "Distopia",
+      "Romance"
+    ],
     "characters": [
       {
         "name": "Juliette Ferrars",
@@ -3566,7 +3993,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Liberta-me",
     "author": "Tahereh Mafi",
     "synopsis": "Depois de chegar ao Ponto Ômega, Juliette descobre que existem outros jovens com habilidades especiais e passa a treinar para usar melhor seus poderes. Mas a liberdade recém-conquistada vem acompanhada de conflitos pessoais, a relação instável com Adam e novas verdades sobre Warner. O grupo precisa decidir como enfrentar o Restabelecimento sem se destruir por dentro.",
-    "genres": [],
+    "genres": [
+      "Ficção científica",
+      "Distopia",
+      "Romance"
+    ],
     "characters": [
       {
         "name": "Juliette Ferrars",
@@ -3599,7 +4030,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Restaura-me",
     "author": "Tahereh Mafi",
     "synopsis": "Depois de assumir um novo papel político, Juliette tenta governar e manter a paz, mas uma série de ataques e revelações transforma a situação em uma crise. O passado de Juliette e Warner está longe de ser conhecido por completo, e a resistência precisa descobrir quem manipula os acontecimentos antes que o poder conquistado desmorone.",
-    "genres": [],
+    "genres": [
+      "Ficção científica",
+      "Distopia",
+      "Romance"
+    ],
     "characters": [
       {
         "name": "Juliette Ferrars",
@@ -3632,7 +4067,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Reveal Me",
     "author": "Tahereh Mafi",
     "synopsis": "Nesta novela narrada por Kenji, as alianças políticas continuam frágeis e o grupo tenta entender as mudanças que abalaram o Restabelecimento. Entre missões, conflitos internos e segredos que ainda não vieram à tona, Kenji precisa deixar de ser apenas o amigo engraçado e assumir seu papel na luta pelo futuro.",
-    "genres": [],
+    "genres": [
+      "Ficção científica",
+      "Distopia",
+      "Romance"
+    ],
     "characters": [
       {
         "name": "Kenji Kishimoto",
@@ -3665,7 +4104,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Vigia-me",
     "author": "Tahereh Mafi",
     "synopsis": "A próxima geração do universo *Estilhaça-me* entra em cena com James Anderson, que tenta descobrir quem é para além do nome e do legado da família. Em um mundo ainda instável após a queda do Restabelecimento, ele e os jovens ao seu redor enfrentam rivalidades, ameaças e sentimentos contraditórios enquanto o passado continua influenciando o presente.",
-    "genres": [],
+    "genres": [
+      "Ficção científica",
+      "Distopia",
+      "Aventura"
+    ],
     "characters": [
       {
         "name": "James Anderson",
@@ -3694,7 +4137,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Caraval",
     "author": "Stephanie Garber",
     "synopsis": "Scarlett Dragna sonha em conhecer Caraval, um espetáculo misterioso em que o público participa de um jogo cheio de magia. Quando sua irmã Donatella desaparece, Scarlett precisa distinguir ilusão e realidade para encontrá-la.",
-    "genres": [],
+    "genres": [
+      "Fantasia",
+      "Mistério",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Scarlett Dragna",
@@ -3727,7 +4174,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Finale",
     "author": "Stephanie Garber",
     "synopsis": "No último Caraval, Donatella Dragna precisa descobrir a identidade verdadeira de Lenda e cumprir uma promessa perigosa que fez para salvar a irmã. À medida que segredos, magia e romance se entrelaçam, Scarlett e Tella enfrentam o preço de suas escolhas e a possibilidade de que o jogo tenha consequências reais para todos os envolvidos.",
-    "genres": [],
+    "genres": [
+      "Fantasia",
+      "Romance",
+      "Aventura"
+    ],
     "characters": [
       {
         "name": "Donatella (Tella) Dragna",
@@ -3764,7 +4215,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Lendário",
     "author": "Stephanie Garber",
     "synopsis": "Depois do primeiro Caraval, Tella precisa pagar a dívida que tornou possível a participação das irmãs no jogo. Ela viaja para Valenda em busca de seu misterioso correspondente e se envolve em um evento ainda mais perigoso, no qual festas mascaradas e ilusões escondem segredos sobre Lenda. Enquanto isso, Scarlett tenta compreender o que sente por Julian.",
-    "genres": [],
+    "genres": [
+      "Fantasia",
+      "Mistério",
+      "Romance"
+    ],
     "characters": [
       {
         "name": "Donatella (Tella) Dragna",
@@ -3801,7 +4256,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "A lâmina da assassina",
     "author": "Sarah J. Maas",
     "synopsis": "Esta coletânea de cinco histórias acompanha Celaena Sardothien antes de *Trono de Vidro*. A assassina mais famosa de Adarlan recebe missões que a levam a uma ilha de piratas, a um deserto e a encontros inesperados. Ao desafiar ordens de seu mestre, Arobynn Hamel, Celaena precisa escolher entre obedecer à Guilda dos Assassinos e seguir seu próprio senso de justiça.",
-    "genres": [],
+    "genres": [
+      "Fantasia épica",
+      "Aventura",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Celaena Sardothien",
@@ -3834,7 +4293,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Coroa da meia-noite",
     "author": "Sarah J. Maas",
     "synopsis": "Como campeã do rei de Adarlan, Celaena parece cumprir as ordens de eliminar seus inimigos, mas secretamente ajuda algumas vítimas a escapar. Ao investigar uma rebelião e a princesa perdida de Terrasen, ela descobre pistas sobre uma magia que o rei deseja apagar. As revelações colocam sua lealdade, seus sentimentos e o futuro do reino em risco.",
-    "genres": [],
+    "genres": [
+      "Fantasia épica",
+      "Aventura",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Celaena Sardothien",
@@ -3871,7 +4334,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Herdeira do Fogo",
     "author": "Sarah J. Maas",
     "synopsis": "Após acontecimentos devastadores em Adarlan, Celaena viaja para Wendlyn para enfrentar seu passado e compreender sua herança. Sob o treinamento de Rowan Whitethorn, precisa dominar a magia e recuperar a vontade de lutar. Enquanto isso, Chaol investiga ameaças na corte e a bruxa Manon Bico Negro treina para liderar as temidas Treze.",
-    "genres": [],
+    "genres": [
+      "Fantasia épica",
+      "Aventura",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Celaena / Aelin Galathynius",
@@ -3908,7 +4375,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Império de Tempestades",
     "author": "Sarah J. Maas",
     "synopsis": "Com sua identidade e seu destino assumidos, Aelin Galathynius percorre Erilea em busca de alianças para recuperar Terrasen e enfrentar o mal que ameaça o continente. A formação de exércitos exige negociações difíceis e sacrifícios, enquanto o grupo se aproxima de uma guerra capaz de definir o futuro de todos os reinos.",
-    "genres": [],
+    "genres": [
+      "Fantasia épica",
+      "Aventura",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Aelin Galathynius",
@@ -3945,7 +4416,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Rainha das sombras",
     "author": "Sarah J. Maas",
     "synopsis": "De volta a Rifthold, Celaena — agora pronta para abraçar a identidade de Aelin Galathynius — pretende libertar sua cidade e enfrentar o rei de Adarlan. Aliados antigos e novos se juntam a ela, mas as bruxas, os demônios e as intrigas do palácio tornam a retomada do poder uma luta perigosa.",
-    "genres": [],
+    "genres": [
+      "Fantasia épica",
+      "Aventura",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Aelin Galathynius",
@@ -3982,7 +4457,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Reino de cinzas",
     "author": "Sarah J. Maas",
     "synopsis": "A guerra final se aproxima, e Aelin precisa encontrar uma saída do cativeiro que ameaça destruir seu espírito, enquanto seus aliados reúnem forças para enfrentar Erawan e Maeve. Em diferentes frentes de Erilea, amigos e antigos inimigos fazem sacrifícios para que os reinos tenham chance de sobreviver. O destino do mundo depende de escolhas e alianças construídas ao longo da saga.",
-    "genres": [],
+    "genres": [
+      "Fantasia épica",
+      "Aventura",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Aelin Galathynius",
@@ -4019,7 +4498,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Torre do alvorecer",
     "author": "Sarah J. Maas",
     "synopsis": "Ferido após a queda do Castelo de Vidro, Chaol Westfall viaja ao império do sul para buscar tratamento com os lendários curandeiros da Torre Cesme. Acompanhado por Nesryn, ele precisa enfrentar a própria vulnerabilidade e formar alianças que podem ser decisivas para a guerra que se aproxima. Ao mesmo tempo, descobre segredos sobre o continente e seus poderes.",
-    "genres": [],
+    "genres": [
+      "Fantasia épica",
+      "Aventura",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Chaol Westfall",
@@ -4056,7 +4539,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Trono de Vidro",
     "author": "Sarah J. Maas",
     "synopsis": "Celaena Sardothien, a assassina mais famosa de Adarlan, está presa nas Minas de Sal de Endovier quando recebe uma oferta do príncipe Dorian: competir para se tornar a campeã do rei e conquistar a liberdade. Na corte, cercada por assassinos rivais, segredos antigos e uma magia dada como desaparecida, Celaena precisa lutar para sobreviver e desvendar uma ameaça mortal.",
-    "genres": [],
+    "genres": [
+      "Fantasia épica",
+      "Aventura",
+      "Jovem adulto"
+    ],
     "characters": [
       {
         "name": "Celaena Sardothien",
@@ -4089,7 +4576,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Corte de Asas e Ruína",
     "author": "Sarah J. Maas",
     "synopsis": "Depois de fugir da Corte Primaveril, Feyre retorna ao território de Tamlin fingindo submissão enquanto reúne informações para impedir a invasão de Hybern. A guerra ameaça destruir os reinos feéricos e humanos, e Feyre, Rhysand e seus aliados precisam negociar alianças frágeis, enfrentar antigas feridas e decidir o que estão dispostos a sacrificar para proteger Prythian.",
-    "genres": [],
+    "genres": [
+      "Fantasia romântica",
+      "Romance",
+      "Fantasia épica"
+    ],
     "characters": [
       {
         "name": "Feyre Archeron",
@@ -4126,7 +4617,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Corte de Chamas Prateadas",
     "author": "Sarah J. Maas",
     "synopsis": "Após a guerra, Nesta Archeron continua lutando contra a raiva, a culpa e o trauma. Enviada para treinar com Cassian, ela precisa enfrentar seus próprios limites e aprender a controlar uma força antiga que despertou dentro dela. Enquanto ambos se aproximam, uma ameaça envolvendo artefatos mágicos ameaça a paz conquistada em Prythian.",
-    "genres": [],
+    "genres": [
+      "Fantasia romântica",
+      "Romance",
+      "Fantasia adulta"
+    ],
     "characters": [
       {
         "name": "Nesta Archeron",
@@ -4163,7 +4658,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Corte de Espinhos e Rosas",
     "author": "Sarah J. Maas",
     "synopsis": "Ao matar um lobo na floresta, Feyre atrai a atenção de uma criatura feérica que a leva para Prythian, um território mágico além da muralha. Ali, ela descobre que o captor é Tamlin, Grão-Senhor da Corte Primaveril, e que uma antiga ameaça paira sobre seu povo. Entre desconfiança, paixão e perigos sobrenaturais, Feyre precisa decidir o que está disposta a fazer para salvar quem ama.",
-    "genres": [],
+    "genres": [
+      "Fantasia romântica",
+      "Romance",
+      "Fantasia épica"
+    ],
     "characters": [
       {
         "name": "Feyre Archeron",
@@ -4200,7 +4699,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Corte de gelo e estrelas",
     "author": "Sarah J. Maas",
     "synopsis": "Depois da guerra contra Hybern, Feyre e Rhysand tentam reconstruir Velaris e manter a paz na Corte Noturna. Com a aproximação do Solstício de Inverno, celebrações e tarefas cotidianas revelam que os sobreviventes ainda carregam cicatrizes profundas. Esta novela acompanha os personagens no rescaldo da guerra e prepara o terreno para conflitos futuros.",
-    "genres": [],
+    "genres": [
+      "Fantasia romântica",
+      "Romance",
+      "Novela"
+    ],
     "characters": [
       {
         "name": "Feyre Archeron",
@@ -4237,7 +4740,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Corte de névoa e fúria",
     "author": "Sarah J. Maas",
     "synopsis": "Após sobreviver às provas de Sob a Montanha, Feyre retorna à Corte Primaveril, mas continua assombrada pelo trauma e pelo acordo feito com Rhysand. Quando ele a chama para a Corte Noturna, Feyre começa a compreender os próprios poderes e a descobrir que o mundo feérico é muito mais complexo do que imaginava. Uma nova ameaça exige que ela escolha em quem confiar.",
-    "genres": [],
+    "genres": [
+      "Fantasia romântica",
+      "Romance",
+      "Fantasia épica"
+    ],
     "characters": [
       {
         "name": "Feyre Archeron",
@@ -4274,7 +4781,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Casa de Céu e Sopro",
     "author": "Sarah J. Maas",
     "synopsis": "Depois de uma investigação perigosa em Lunathion, Bryce Quinlan e Hunt Athalar tentam desfrutar de uma trégua, mas conspirações políticas e segredos sobre as criaturas que governam Midgard voltam a ameaçá-los. À medida que novas alianças se formam e a resistência ganha força, Bryce se aproxima de respostas que podem mudar o equilíbrio de poder do mundo.",
-    "genres": [],
+    "genres": [
+      "Fantasia urbana",
+      "Fantasia romântica",
+      "Aventura"
+    ],
     "characters": [
       {
         "name": "Bryce Quinlan",
@@ -4311,7 +4822,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Casa de chama e sombra",
     "author": "Sarah J. Maas",
     "synopsis": "Após descobrir verdades sobre Midgard, Bryce Quinlan fica presa em um mundo desconhecido e só quer voltar para casa, onde estão sua família, seus amigos e Hunt. Enquanto busca um caminho de volta, precisa decidir em quem confiar e desvendar segredos sobre os Asteri. Em paralelo, Hunt está aprisionado e tenta escapar para ajudá-la antes que o mundo desabe.",
-    "genres": [],
+    "genres": [
+      "Fantasia urbana",
+      "Fantasia romântica",
+      "Aventura"
+    ],
     "characters": [
       {
         "name": "Bryce Quinlan",
@@ -4348,7 +4863,11 @@ window.FDP_DEFAULT_BOOKS = [
     "title": "Casa de Terra e Sangue",
     "author": "Sarah J. Maas",
     "synopsis": "Bryce Quinlan leva uma vida de trabalho e festas em Lunathion até que um demônio assassina seus amigos e destrói seu mundo. Quando crimes semelhantes recomeçam, ela participa de uma investigação para encontrar o responsável. Hunt Athalar, um anjo caído escravizado pelos arcanjos, recebe a missão de ajudá-la em troca de uma possível liberdade; juntos, descobrem uma ameaça muito maior.",
-    "genres": [],
+    "genres": [
+      "Fantasia urbana",
+      "Fantasia romântica",
+      "Mistério"
+    ],
     "characters": [
       {
         "name": "Bryce Quinlan",

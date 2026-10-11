@@ -4,6 +4,7 @@
   const STORAGE_KEY = 'florDePagina.library.v1';
   const THEME_KEY = 'florDePagina.theme';
   const SEED_VERSION_KEY = 'florDePagina.defaultsSeeded.v2';
+  const GENRE_MIGRATION_KEY = 'florDePagina.defaultGenresSeeded.v1';
   const HANDLE_DB = 'florDePagina.fileHandles';
   const HANDLE_STORE = 'handles';
   const $ = (selector, root = document) => root.querySelector(selector);
@@ -301,8 +302,8 @@
   function exportJSON() {
     const date = new Date().toISOString().slice(0, 10);
     const data = JSON.stringify(payloadForExport(), null, 2);
-    downloadBlob(new Blob([data], { type: 'application/json;charset=utf-8' }), `biblioteca-livros-${date}.json`);
-    toast('Backup JSON preparado para baixar.');
+    downloadBlob(new Blob([data], { type: 'application/json;charset=utf-8' }), `flor-de-pagina-backup-${date}.json`);
+    toast(`Backup da biblioteca (${books.length} livro(s)) baixado em JSON.`);
   }
 
   async function importJSONFile(file) {
@@ -343,13 +344,15 @@
     if (!Array.isArray(window.FDP_DEFAULT_BOOKS)) return;
 
     let alreadySeeded = false;
+    let genresMigrated = false;
     try {
       alreadySeeded = localStorage.getItem(SEED_VERSION_KEY) === '1';
+      genresMigrated = localStorage.getItem(GENRE_MIGRATION_KEY) === '1';
     } catch {
-      // Se localStorage estiver indisponível, mesclamos em memória nesta sessão.
+      // Se localStorage estiver indisponível, tentamos complementar em memória.
     }
 
-    if (alreadySeeded) return;
+    if (alreadySeeded && genresMigrated) return;
 
     const defaults = parseLibrary(window.FDP_DEFAULT_BOOKS);
     const existingByTitle = new Map(
@@ -362,13 +365,17 @@
       const existing = existingByTitle.get(key);
 
       if (!existing) {
-        books.push(defaultBook);
-        existingByTitle.set(key, defaultBook);
-        changed = true;
+        // Insere todos os padrões na primeira abertura. Em uma biblioteca já
+        // inicializada, não ressuscita títulos que a pessoa tenha excluído.
+        if (!alreadySeeded) {
+          books.push(defaultBook);
+          existingByTitle.set(key, defaultBook);
+          changed = true;
+        }
         continue;
       }
 
-      // Em bibliotecas da versão anterior, complementa autor/capa sem apagar dados pessoais.
+      // Complementa campos vazios sem apagar informações pessoais existentes.
       if (!existing.author && defaultBook.author) {
         existing.author = defaultBook.author;
         changed = true;
@@ -377,20 +384,31 @@
         existing.cover = defaultBook.cover;
         changed = true;
       }
-      // Migra os títulos padrão antigos de 'Quero ler' para a estante neutra.
-      if (existing.status === 'Quero ler' && defaultBook.status === 'Biblioteca' && !existing.rating && !existing.comments && !existing.notes) {
+      if (!existing.synopsis && defaultBook.synopsis) {
+        existing.synopsis = defaultBook.synopsis;
+        changed = true;
+      }
+      if ((!Array.isArray(existing.characters) || existing.characters.length === 0) && defaultBook.characters?.length) {
+        existing.characters = defaultBook.characters.map(character => ({ ...character }));
+        changed = true;
+      }
+      // Preenche os gêneros que faltam; gêneros escolhidos pela pessoa são preservados.
+      if ((!Array.isArray(existing.genres) || existing.genres.length === 0) && defaultBook.genres?.length) {
+        existing.genres = [...defaultBook.genres];
+        changed = true;
+      }
+      // Migra itens intocados do status antigo para o status padrão atual.
+      if (existing.id === defaultBook.id && existing.status === 'Quero ler' && defaultBook.status === 'Biblioteca' && !existing.rating && !existing.favorite && !existing.comments && !existing.notes) {
         existing.status = 'Biblioteca';
         changed = true;
       }
-      // Preenche sinopse/personagens apenas quando a ficha local ainda está vazia.
-      if (!existing.synopsis && defaultBook.synopsis) { existing.synopsis = defaultBook.synopsis; changed = true; }
-      if ((!existing.characters || existing.characters.length === 0) && defaultBook.characters?.length) { existing.characters = defaultBook.characters; changed = true; }
     }
 
     if (changed) saveLocalBooks();
 
     try {
       localStorage.setItem(SEED_VERSION_KEY, '1');
+      localStorage.setItem(GENRE_MIGRATION_KEY, '1');
     } catch {
       // Os dados padrão continuam visíveis mesmo sem persistência local.
     }
@@ -412,8 +430,6 @@
     $('#stat-total').textContent = books.length;
     $('#nav-total').textContent = books.length;
     $('#stat-want').textContent = books.filter(book => book.status === 'Biblioteca').length;
-    const wantLabel = document.querySelector('.stat-lilac .stat-label, .stat-lilac span');
-    if (wantLabel) wantLabel.textContent = 'Biblioteca';
     const ratings = books.filter(book => book.rating > 0).map(book => book.rating);
     $('#stat-rating').textContent = ratings.length ? (ratings.reduce((sum, value) => sum + value, 0) / ratings.length).toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) : '—';
   }
@@ -677,34 +693,24 @@
   function isMobileSidebarLayout() {
     return window.matchMedia('(max-width: 680px)').matches;
   }
+
   function setMobileMenuOpen(open, restoreFocus = false) {
     if (!sidebar || !mobileMenuToggle || !sidebarBackdrop) return;
+
     const mobile = isMobileSidebarLayout();
     const shouldOpen = mobile && Boolean(open);
+
     window.clearTimeout(backdropHideTimer);
     document.body.classList.toggle('mobile-menu-open', shouldOpen);
-    sidebar.setAttribute(
-      'aria-hidden',
-      String(mobile && !shouldOpen)
-    );
+    sidebar.setAttribute('aria-hidden', String(mobile && !shouldOpen));
     sidebar.inert = mobile && !shouldOpen;
-    mobileMenuToggle.setAttribute(
-      'aria-expanded',
-      String(shouldOpen)
-    );
-    mobileMenuToggle.setAttribute(
-      'aria-label',
-      shouldOpen ? 'Fechar menu' : 'Abrir menu'
-    );
-    const menuIcon = $('#mobile-menu-icon');
-    if (menuIcon) {
-      menuIcon.textContent = shouldOpen ? '×' : '☰';
-    }
+    mobileMenuToggle.setAttribute('aria-expanded', String(shouldOpen));
+    mobileMenuToggle.setAttribute('aria-label', shouldOpen ? 'Fechar menu' : 'Abrir menu');
+    $('#mobile-menu-icon').textContent = shouldOpen ? '×' : '☰';
+
     if (shouldOpen) {
       sidebarBackdrop.hidden = false;
-      requestAnimationFrame(() => {
-        sidebarBackdrop.classList.add('visible');
-      });
+      window.requestAnimationFrame(() => sidebarBackdrop.classList.add('visible'));
     } else {
       sidebarBackdrop.classList.remove('visible');
       backdropHideTimer = window.setTimeout(() => {
@@ -713,144 +719,125 @@
         }
       }, 230);
     }
+
     if (restoreFocus && mobile) {
       mobileMenuToggle.focus({ preventScroll: true });
     }
   }
+
   function syncMobileSidebarMode() {
     if (!sidebar || !mobileMenuToggle || !sidebarBackdrop) return;
-    const mobile = isMobileSidebarLayout();
-    if (!mobile) {
+
+    if (!isMobileSidebarLayout()) {
       document.body.classList.remove('mobile-menu-open');
       sidebar.setAttribute('aria-hidden', 'false');
       sidebar.inert = false;
       mobileMenuToggle.setAttribute('aria-expanded', 'false');
       mobileMenuToggle.setAttribute('aria-label', 'Abrir menu');
-      const menuIcon = $('#mobile-menu-icon');
-      if (menuIcon) {
-        menuIcon.textContent = '☰';
-      }
+      $('#mobile-menu-icon').textContent = '☰';
       sidebarBackdrop.classList.remove('visible');
       sidebarBackdrop.hidden = true;
       window.clearTimeout(backdropHideTimer);
       return;
     }
+
     const isOpen = document.body.classList.contains('mobile-menu-open');
     sidebar.setAttribute('aria-hidden', String(!isOpen));
     sidebar.inert = !isOpen;
     mobileMenuToggle.setAttribute('aria-expanded', String(isOpen));
-    mobileMenuToggle.setAttribute(
-      'aria-label',
-      isOpen ? 'Fechar menu' : 'Abrir menu'
-    );
-    const menuIcon = $('#mobile-menu-icon');
-    if (menuIcon) {
-      menuIcon.textContent = isOpen ? '×' : '☰';
-    }
+    mobileMenuToggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+    $('#mobile-menu-icon').textContent = isOpen ? '×' : '☰';
     if (!isOpen) {
       sidebarBackdrop.classList.remove('visible');
       sidebarBackdrop.hidden = true;
     }
   }
+
   function bindMobileSidebarEvents() {
+    // Botão: funciona tanto com toque quanto com clique/teclado.
     mobileMenuToggle?.addEventListener('click', () => {
-      const isOpen = document.body.classList.contains(
-        'mobile-menu-open'
-      );
+      const isOpen = document.body.classList.contains('mobile-menu-open');
       setMobileMenuOpen(!isOpen, isOpen);
     });
+
+    // Toque fora do menu fecha a gaveta.
     sidebarBackdrop?.addEventListener('click', () => {
       setMobileMenuOpen(false, true);
     });
+
+    // Selecionar uma seção ou tocar na marca fecha o menu no celular.
     sidebar?.addEventListener('click', event => {
-      const target = event.target;
-      if (
-        target instanceof Element &&
-        target.closest('.nav-item, .brand')
-      ) {
+      if (event.target.closest('.nav-item, .brand')) {
         setMobileMenuOpen(false, true);
       }
     });
-    window.addEventListener('resize', syncMobileSidebarMode, {
-      passive: true
-    });
-    let touchStartX = 0;
-    let touchStartY = 0;
-    let touchStartMenuOpen = false;
-    let touchValid = false;
-    document.addEventListener(
-      'touchstart',
-      event => {
-        if (
-          !isMobileSidebarLayout() ||
-          document.querySelector('dialog[open]')
-        ) {
-          touchValid = false;
-          return;
-        }
-        if (event.touches.length !== 1) {
-          touchValid = false;
-          return;
-        }
-        const touch = event.touches[0];
-        touchStartX = touch.clientX;
-        touchStartY = touch.clientY;
-        touchStartMenuOpen = document.body.classList.contains(
-          'mobile-menu-open'
-        );
-        touchValid = true;
-      },
-      {
-        passive: true,
-        capture: true
-      }
-    );
-    document.addEventListener(
-      'touchend',
-      event => {
-        if (!touchValid || !isMobileSidebarLayout()) {
-          touchValid = false;
-          return;
-        }
-        touchValid = false;
-        const touch = event.changedTouches[0];
-        if (!touch) return;
-        const touchEndX = touch.clientX;
-        const touchEndY = touch.clientY;
-        const diffX = touchEndX - touchStartX;
-        const diffY = touchEndY - touchStartY;
-        if (Math.abs(diffX) < 70) return;
-        if (Math.abs(diffX) < Math.abs(diffY) * 1.2) return;
-        if (touchStartMenuOpen) {
-          if (diffX < -70) {
-            setMobileMenuOpen(false, true);
-          }
-        } else {
-          if (diffX > 70 && touchStartX <= 45) {
-            setMobileMenuOpen(true);
-          }
-        }
-      },
-      {
-        passive: true,
-        capture: true
-      }
-    );
 
-    // Cancela a detecção se o navegador interromper o toque.
-    document.addEventListener(
-      'touchcancel',
-      () => {
-        touchValid = false;
-      },
-      { passive: true }
-    );
+    window.addEventListener('resize', syncMobileSidebarMode, { passive: true });
+
+    // Swipe simplificado: um movimento horizontal claro abre/fecha a sidebar.
+    // Capture=true ajuda a detectar o gesto mesmo quando começa em elementos internos.
+    document.addEventListener('touchstart', event => {
+      if (!isMobileSidebarLayout() || document.querySelector('dialog[open]')) {
+        swipeStart = null;
+        return;
+      }
+
+      // Só considera um dedo; gestos de zoom não devem abrir o menu.
+      if (event.touches.length !== 1) {
+        swipeStart = null;
+        return;
+      }
+
+      const touch = event.changedTouches[0] || event.touches[0];
+      if (!touch) return;
+
+      swipeStart = {
+        x: touch.clientX ?? touch.screenX,
+        y: touch.clientY ?? touch.screenY,
+        menuOpen: document.body.classList.contains('mobile-menu-open')
+      };
+    }, { passive: true, capture: true });
+
+    document.addEventListener('touchend', event => {
+      if (!swipeStart || !isMobileSidebarLayout()) {
+        swipeStart = null;
+        return;
+      }
+
+      const start = swipeStart;
+      swipeStart = null;
+      const touch = event.changedTouches[0];
+      if (!touch) return;
+
+      const endX = touch.clientX ?? touch.screenX;
+      const endY = touch.clientY ?? touch.screenY;
+      const diffX = endX - start.x;
+      const diffY = endY - start.y;
+
+      // Evita interpretar rolagem vertical ou toques curtos como swipe.
+      if (Math.abs(diffX) < 50 || Math.abs(diffX) < Math.abs(diffY) * 1.2) return;
+
+      if (start.menuOpen) {
+        // Com a gaveta aberta, arrastar para a esquerda fecha o menu.
+        if (diffX < -50) setMobileMenuOpen(false, true);
+      } else {
+        // Com a gaveta fechada, arrastar para a direita desde a borda abre.
+        // A faixa de 40 px é mais tolerante do que exigir o primeiro pixel da tela.
+        if (diffX > 50 && start.x <= 150) setMobileMenuOpen(true);
+      }
+    }, { passive: true, capture: true });
+
+    document.addEventListener('touchcancel', () => {
+      swipeStart = null;
+    }, { passive: true, capture: true });
   }
+
   function bindEvents() {
     $('#add-book').addEventListener('click', openNewBook);
     $('#empty-add').addEventListener('click', openNewBook);
     $('#theme-toggle').addEventListener('click', () => setTheme(document.body.classList.contains('dark') ? 'light' : 'dark'));
     $('#connect-json').addEventListener('click', connectJSON);
+    $('#download-library').addEventListener('click', exportJSON);
     $('#export-json').addEventListener('click', exportJSON);
     $('#import-json').addEventListener('click', () => $('#import-file-input').click());
     $('#import-file-input').addEventListener('change', event => importJSONFile(event.target.files?.[0]));

@@ -50,3 +50,7 @@ body.dark{color-scheme:dark;--bg:#19151c;--surface:#231d27;--surface-2:#31232f;-
 @media(prefers-reduced-motion:reduce){
   @media(max-width:680px){.sidebar,.sidebar-backdrop{transition:none!important;}}
 }
+
+/* Keep the backup action clearly labelled even on compact screens. */
+.top-actions #download-library span{display:inline}
+@media(max-width:680px){.top-actions #download-library{flex:1 1 auto;white-space:nowrap}.top-actions #download-library span{display:inline}}
